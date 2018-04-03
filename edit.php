@@ -5,10 +5,10 @@ if(!isset($_SESSION['username'])){
 session_unset();?>
 
 <?php
-$servername = "localhost";
-$username = "root";
+$servername = getenv("herokuServer");
+$username = getenv("herokuUser");
 $password = getenv("herokuPass");
-$dbName = "HHSCLUBSDATA";
+$dbName = getenv("herokuDB");
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbName);
