@@ -119,6 +119,7 @@ body {
 }
 
 .footer {
+    margin-top: 14px;
     background-color:rgb(38, 49, 68);
     color: white;
 }
@@ -263,19 +264,31 @@ body {
     padding-top: 7px;
 }
 
+#footerPhone{
+    display: none;
+}
+
 @media (max-width: 576px) {
-    .hhsmainpage {
-        display: block;
-        padding: .5em 0em;
-        color: white;
-        font-size: .7rem;
-        margin: 0;
+    .copyright {
+        margin: 0 10px
     }
-    .scrollbot {
-        font-size: .7rem;
-        color: white;
-        padding: .5em 0em;
-        margin: 0;
+    #navigation .container .justify-content-between {
+        -webkit-box-pack: center!important;
+        -webkit-justify-content: center!important;
+        -ms-flex-pack: center!important;
+        justify-content: center!important;
+    }
+    .googletranslate {
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 432px) {
+    #footer {
+        display: none;
+    }
+    #footerPhone {
+        display: block !important;
     }
 }
 
@@ -392,4 +405,35 @@ body {
 }
 .col-sm-12{
 	float: left;
+}
+
+.btn-md {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,.2), 0 6px 20px 0 rgba(0,0,0,.19);
+}
+
+.btn-custom{
+    color: #fff;
+    background-color: rgb(76,105,149);
+    border-color: rgb(76,105,149);
+    cursor: pointer;
+}
+
+.btn-custom:hover{
+    color: #fff;
+    background-color: rgb(46,75,129);
+    border-color: rgb(46,75,129);
+}
+
+.btn-submit-custom{
+    color: #fff;
+    background-color: rgb(40,48,67);
+    border-color: rgb(40,48,67);
+    cursor: pointer;
+}
+
+.btn-submit-custom:hover{
+    color: #fff;
+    background-color: rgb(10,18,37);
+    border-color: rgb(10,18,37);
+    cursor: pointer;
 }

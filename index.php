@@ -77,7 +77,7 @@ while($rowu = $emailresults->fetch_assoc()) {
 <html>
     <head>
         <title>HHS Clubs</title>
-        <meta name="description" content="This is my website. It's not good :(">
+        <meta name="description" content="A place to view all the highschool's clubs.">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href = "style.css">
         <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
@@ -123,11 +123,20 @@ var emailObject = <?php echo json_encode($emailObject) ?>;
 </div>
 <script src = "app.js"></script>
 <footer class="footer" id = "footer">
-    <div class="container-fluid">
-        <div class="row justify-content-between">
-            <span>2018 HHSClubs</span>
-            <a href="edit.php" class="scrolltop"><button>Add or delete a club.</button></a>
+    <div class="container">
+        <div class="row justify-content-between align-items-center">
+            <span class = "copyright" >2018 HHSClubs</span>
+            <a href="edit.php" id="editBtn"><button class = "btn btn-md btn-custom">Add or delete a club</button></a>
             <span><a class="copyright" target="_blank" href = "https://github.com/Poonchy">&copy; Stav Corcos</a></span>
+        </div>
+    </div>
+</footer>
+<footer class="footer" id = "footerPhone">
+    <div class="container">
+        <div class="row justify-content-center align-items-center">
+            <span class = "copyright" >2018 HHSClubs</span>
+            <span><a class="copyright" target="_blank" href = "https://github.com/Poonchy">&copy; Stav Corcos</a></span>
+            <a href="edit.php" id="editBtn"><button class = "btn btn-md btn-custom">Add or delete a club</button></a>
         </div>
     </div>
 </footer>

@@ -37,7 +37,7 @@ if($conn->query($sql)) {
     </head>
     <div class = "container">
     <div class = "row justify-content-center">
-<a href = "index.php"><button>Back to main page</button></a>
+<a href = "index.php"><button class = "btn btn-md btn-submit-custom">Back to main page</button></a>
 </div>
 </div>
 </html>

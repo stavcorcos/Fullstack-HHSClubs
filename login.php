@@ -1,7 +1,6 @@
 <html>
     <head>
         <title>HHSClubs Authorization</title>
-        <meta name="description" content="This is my website. It's not good :(">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href = "style.css">
         <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
@@ -14,11 +13,11 @@
     </head>
     <body>
         <br>
-        <h1 style = "text-align: center;">Authorization</h1>
-    <form style = "text-align: center;"method="post" action="authorization.php">
-    Username: <input name="username"><br><br>
-    Password: <input type = "password" name="password"><br><br>
-    <input type="submit" value = "Submit">
-</form>
-</body>
+        <h1 style = "color: white; text-align: center;">Authorization</h1>
+        <form style = "text-align: center;"method="post" action="authorization.php">
+        Username: <input name="username"><br><br>
+        Password: <input type = "password" name="password"><br><br>
+        <input class = "btn btn-md btn-submit-custom" type="submit" value = "Submit">
+        </form>
+    </body>
 </html>
