@@ -122,5 +122,14 @@ var emailObject = <?php echo json_encode($emailObject) ?>;
     </div>
 </div>
 <script src = "app.js"></script>
+<footer class="footer" id = "footer">
+    <div class="container-fluid">
+        <div class="row justify-content-between">
+            <span>2018 HHSClubs</span>
+            <a href="edit.php" class="scrolltop"><button>Add or delete a club.</button></a>
+            <span><a class="copyright" target="_blank" href = "https://github.com/Poonchy">&copy; Stav Corcos</a></span>
+        </div>
+    </div>
+</footer>
 </body>
 </html>
