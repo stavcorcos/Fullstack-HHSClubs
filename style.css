@@ -437,3 +437,9 @@ body {
     border-color: rgb(10,18,37);
     cursor: pointer;
 }
+
+.credits {
+    background-image: url(Images/Credits.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}

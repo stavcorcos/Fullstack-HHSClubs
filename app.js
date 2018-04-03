@@ -309,3 +309,68 @@ for (i in clubNamesArray) {
       }
     }
   }
+//Creating the first div
+flexibleSpacing = document.createElement("div");
+flexibleSpacing.setAttribute("class", "col-xl-3 col-lg-4 col-md-6 col-sm-6");
+clubContainer.appendChild(flexibleSpacing);
+
+//Creating the second div
+clubContent = document.createElement("div");
+clubContent.setAttribute("class", "clubcontent");
+flexibleSpacing.appendChild(clubContent);
+
+//Creating the title
+hoverClubName = document.createElement("p");
+hoverClubName.setAttribute("class", "clubname");
+var clubHoverTitle = document.createTextNode("Credits");
+hoverClubName.appendChild(clubHoverTitle);
+clubContent.appendChild(hoverClubName);
+
+//Creating the third div
+projectAnimated = document.createElement("div");
+projectAnimated.setAttribute("class", "col-12 project credits wow animated animated4 fadeInLeft");
+clubContent.appendChild(projectAnimated);
+
+//Creating the fourth div
+projectHoverContent = document.createElement("div");
+projectHoverContent.setAttribute("class", "project-hover");
+projectAnimated.appendChild(projectHoverContent);
+
+//Creating hover short description
+firstP = document.createElement("p");
+firstP.setAttribute("id", "creditdesc")
+firstPT = document.createTextNode("Created by ");
+firstP.appendChild(firstPT);
+
+stavA = document.createElement("a");
+stavA.setAttribute("href", "https://github.com/Poonchy");
+stavA.setAttribute("target", "_blank");
+stavAP = document.createTextNode("Stav Corcos.");
+stavA.appendChild(stavAP);
+firstP.appendChild(stavA);
+
+secondPT = document.createTextNode(" Made possible with the collaborative help of ");
+firstP.appendChild(secondPT);
+
+lunithA = document.createElement("a");
+lunithA.setAttribute("href", "https://github.com/oftheheadland");
+lunithA.setAttribute("target", "_blank");
+lunithAP = document.createTextNode("Andrew VanNess");
+lunithA.appendChild(lunithAP);
+firstP.appendChild(lunithA);
+
+thirdPT = document.createTextNode(" and ");
+firstP.appendChild(thirdPT);
+
+kathrynA = document.createElement("a");
+kathrynA.setAttribute("href", "https://livingsoloved.com");
+kathrynA.setAttribute("target", "_blank");
+kathrynAP = document.createTextNode("Kathryn McCarn.");
+kathrynA.appendChild(kathrynAP);
+firstP.appendChild(kathrynA);
+
+
+projectHoverContent.appendChild(firstP);
+clubHoverHR = document.createElement("hr");
+projectHoverContent.appendChild(clubHoverHR);
+
