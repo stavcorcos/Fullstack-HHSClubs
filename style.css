@@ -339,7 +339,8 @@ body {
 .project-hover a:hover {
 	border-color: rgba(51, 51, 51, 1);
 	color: rgba(51, 51, 51, 1) !important;
-	background-color: #FFF;
+    background-color: #FFF;
+    cursor: pointer;
 }
 
 .clubcontent:hover .project-hover {

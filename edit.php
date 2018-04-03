@@ -32,16 +32,17 @@ $results = $conn->query($query);
     </head>
 <body id = "body">
 
+<div class = "container">
 <div class = "row justify-content-center">
-<div class = "col-6">
-    <h1 style = "color: white;"> Add a club. </h1>
-    <form action = "insert.php" method="post">
+<div class = "col-xl-6 col-lg-6 col-md-10 col-sm-12">
+    <h1 style = "text-align: center; color: white;"> Add a club. </h1>
+    <form style = "text-align: center;"action = "insert.php" method="post">
         <input placeholder = "Club name..." style = "width: 400px;" type = "text" required name="name"><br><br>
         <input id="text" placeholder = "A short description to catch a student's attention." style = "width: 400px; resize: none; overflow: hidden; outline: none;" type = "text" required name="shortDesc"><br><br>
-        <input placeholder = "Background image URL.. must end in .png,.jpg or .jpeg!" style = "width: 400px;" type = "text" required name="icon"><br><br>
-        <input placeholder = "Left image URL... must end in .png,.jpg or .jpeg!" style = "width: 400px;" type = "text" required name="left"><br><br>
-        <input id="texttwo" placeholder = "A long description to tell the student what he would do." style = "width: 400px; resize: none; overflow: hidden; outline: none;" type = "text" required name="longDesc"><br><br>
-        <input placeholder = "Right image URL... must end in .png,.jpg or .jpeg!" style = "width: 400px;" type = "text" required name="right"><br><br>
+        <input pattern="(?:([^:/?#]+):)?(?://([^/?#]*))?([^?#]*\.(?:jpg|gif|png|jpeg))(?:\?([^#]*))?(?:#(.*))?" placeholder = "Background image URL.. must end in .png,.jpg or .jpeg!" style = "width: 400px;" type = "text" required name="icon"><br><br>
+        <input pattern="(?:([^:/?#]+):)?(?://([^/?#]*))?([^?#]*\.(?:jpg|gif|png|jpeg))(?:\?([^#]*))?(?:#(.*))?" placeholder = "Left image URL... must end in .png,.jpg or .jpeg!" style = "width: 400px;" type = "text" required name="left"><br><br>
+        <input id="texttwo" placeholder = "A long description to tell the student what they would do." style = "width: 400px; resize: none; overflow: hidden; outline: none;" type = "text" required name="longDesc"><br><br>
+        <input pattern="(?:([^:/?#]+):)?(?://([^/?#]*))?([^?#]*\.(?:jpg|gif|png|jpeg))(?:\?([^#]*))?(?:#(.*))?" placeholder = "Right image URL... must end in .png,.jpg or .jpeg!" style = "width: 400px;" type = "text" required name="right"><br><br>
         <input placeholder = "Room # or location of rendevouz." style = "width: 400px;" type = "text" required name="room"><br><br>
         <input placeholder = "What times and on what days does the club meet?" style = "width: 400px;" type = "text" required name="times"><br><br>
         <input placeholder = "What is the advisor's name?" style = "width: 400px;" type = "text" required name="advisor"><br><br>
@@ -49,18 +50,18 @@ $results = $conn->query($query);
         <input type="submit">
     </form>
 </div>
-<div class = "col-6">
-<h1 style = "color: white;"> Delete a club. </h1>
-<form action = "delete.php" method="post">
+<div class = "col-xl-6 col-lg-6 col-md-10 col-sm-12">
+<h1 style = "text-align: center; color: white;"> Delete a club. </h1>
+<form style = "text-align: center;" action = "delete.php" method="post">
     <?php 
         while($rows = $results->fetch_assoc()) {
-            echo "<input type = 'radio' name='delclub' value='" . $rows["clubName"] . "'>" . $rows["clubName"];
+            echo "<input required type = 'radio' name='delclub' value='" . $rows["clubName"] . "'>" . $rows["clubName"] . "<br>";
         }
     ?>
     <br>
-    <br>
     <input type="submit">
 </form>
+</div>
 </div>
 </div>
 <br>
