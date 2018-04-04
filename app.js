@@ -193,6 +193,7 @@ for (i in clubNamesArray) {
 
   //Creating the modal black background
     modalBackground = document.createElement("div");
+    modalBackground.style.zIndex = "9";
     modalBackground.setAttribute("id", noSpaceClub + "-button-modal")
     modalBackground.setAttribute("class", "modal modalSelector")
     body.appendChild(modalBackground);
@@ -204,6 +205,7 @@ for (i in clubNamesArray) {
 
   //Creating the close button
     modalEx = document.createElement("span");
+    modalEx.style.zIndex = "10";
     modalEx.setAttribute("class", "close-button");
     modalEx.setAttribute("id", "close-" + noSpaceClub);
     exButton = document.createTextNode("✖");
@@ -258,22 +260,35 @@ for (i in clubNamesArray) {
   //Creating the list
     clubInfoList = document.createElement("ul");
     clubInfoList.setAttribute("class", "desc-list");
+
     roomLi = document.createElement("li");
     timesLi = document.createElement("li");
     advisorLi = document.createElement("li");
     emailLi = document.createElement("li");
+
     roomText = document.createTextNode("Room: " + this[CSSObjectName].room);
     timesText = document.createTextNode("Times: " + this[CSSObjectName].times);
     advisorText = document.createTextNode("Advisor: " + this[CSSObjectName].advisor);
-    emailText = document.createTextNode("Contact info: " + this[CSSObjectName].email);
+    emailText = document.createTextNode(this[CSSObjectName].email);
+    emailTextTwo = document.createTextNode("Email: ");
+
+    emailAnchor = document.createElement("a");
+    emailAnchor.setAttribute("href", "mailto:" + this[CSSObjectName].email);
+    emailAnchor.setAttribute("target", "_blank");
+    emailAnchor.appendChild(emailText);
+
+
     roomLi.appendChild(roomText);
     timesLi.appendChild(timesText);
     advisorLi.appendChild(advisorText);
-    emailLi.appendChild(emailText);
+    emailLi.appendChild(emailTextTwo);
+    emailLi.appendChild(emailAnchor);
+
     clubInfoList.appendChild(roomLi);
     clubInfoList.appendChild(timesLi);
     clubInfoList.appendChild(advisorLi);
     clubInfoList.appendChild(emailLi);
+
     longDescDiv.appendChild(clubInfoList);
 
   //Buttons to open the modal  
@@ -304,8 +319,11 @@ for (i in clubNamesArray) {
     for (var j = 0; j< modalsCount; j++) {
       modals[j].onclick = function() {
         var modalItself = document.getElementById(this.id);
-        modalItself.style.display = "none";
-
+        window.onclick = function(event) {
+          if (event.target == modalItself) {
+            modalItself.style.display = "none";
+          }
+        }
       }
     }
   }
