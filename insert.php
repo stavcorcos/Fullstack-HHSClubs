@@ -1,8 +1,13 @@
 <?php 
-$servername = getenv("herokuServer");
+/* $servername = getenv("herokuServer");
 $username = getenv("herokuUser");
 $password = getenv("herokuPass");
-$dbName = getenv("herokuDB");
+$dbName = getenv("herokuDB"); */
+
+$servername = "localhost";
+$username = "root";
+$password = "1998St@v";
+$dbName = "hhsclubsdata";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbName);
@@ -11,6 +16,14 @@ $conn = new mysqli($servername, $username, $password, $dbName);
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
+
+session_start();
+if (isset($_SESSION['refresh'])) {
+    header("Location:index.php");
+    session_unset();
+    die;
+}
+$_SESSION['refresh'] = "done";
 
 $clubName = mysqli_real_escape_string($conn, $_POST["name"]);
 $shortDesc = mysqli_real_escape_string($conn, $_POST["shortDesc"]);
