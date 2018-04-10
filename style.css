@@ -51,12 +51,22 @@
     cursor: pointer;
 }
 
+::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;
+}
+
+#superContainer {
+    overflow-y: auto;
+}
+
 .modalheader{
     text-align: center;
     width: 100%;
     background-color:rgb(38, 49, 68);
     padding-top: 10px;
     padding-bottom: 10px;
+    margin-bottom: 0;
     color: white;
 }
 
@@ -86,6 +96,7 @@
 
 .modaldesc {
     font-size: 1.2rem;
+    text-align: center;
 }
 
 @-webkit-keyframes slideIn {

@@ -5,10 +5,10 @@ if(!isset($_SESSION['username'])){
 session_unset();?>
 
 <?php
-$servername = getenv("herokuServer");
-$username = getenv("herokuUser");
-$password = getenv("herokuPass");
-$dbName = getenv("herokuDB");
+$servername = "localhost";
+$username = "root";
+$password = "1998St@v";
+$dbName = "hhsclubdata";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbName);
@@ -40,10 +40,10 @@ $results = $conn->query($query);
     <form style = "text-align: center;"action = "insert.php" method="post">
         <input placeholder = "Club name..." style = "width: 100%;" type = "text" required name="name"><br><br>
         <textarea row="1" id="text" placeholder = "A short description to catch a student's attention." style = "width: 100%; resize: none; overflow: hidden; outline: none;" type = "text" required name="shortDesc"></textarea><br><br>
-        <input placeholder = "Background image URL.. must be the image link!" style = "width: 100%;" type = "text" required name="icon"><br><br>
-        <input placeholder = "Left image URL... must be the image link!" style = "width: 100%;" type = "text" required name="left"><br><br>
+        <input pattern="(?:([^:/?#]+):)?(?://([^/?#]*))?([^?#]*\.(?:jpg|gif|png|jpeg))(?:\?([^#]*))?(?:#(.*))?" placeholder = "Background image URL, must end with .png, .jpg, or .gif!" style = "width: 100%;" type = "text" required name="icon"><br><br>
+        <input pattern="(?:([^:/?#]+):)?(?://([^/?#]*))?([^?#]*\.(?:jpg|gif|png|jpeg))(?:\?([^#]*))?(?:#(.*))?" placeholder = "Left image URL, must end with .png, .jpg, or .gif!" style = "width: 100%;" type = "text" required name="left"><br><br>
         <textarea row="1" id="texttwo" placeholder = "A long description to tell students about the club." style = "width: 100%; resize: none; overflow: hidden; outline: none;" type = "text" required name="longDesc"></textarea><br><br>
-        <input placeholder = "Right image URL... must be the image link!" style = "width: 100%;" type = "text" required name="right"><br><br>
+        <input pattern="(?:([^:/?#]+):)?(?://([^/?#]*))?([^?#]*\.(?:jpg|gif|png|jpeg))(?:\?([^#]*))?(?:#(.*))?" placeholder = "Right image URL, must end with .png, .jpg, or .gif!" style = "width: 100%;" type = "text" required name="right"><br><br>
         <input placeholder = "Room # or location of rendevouz." style = "width: 100%;" type = "text" required name="room"><br><br>
         <input placeholder = "What times and on what days does the club meet?" style = "width: 100%;" type = "text" required name="times"><br><br>
         <input placeholder = "What is the advisor's name?" style = "width: 100%;" type = "text" required name="advisor"><br><br>

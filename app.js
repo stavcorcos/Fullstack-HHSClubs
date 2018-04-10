@@ -222,6 +222,7 @@ for (i in clubNamesArray) {
   //Creating the modal sub body
     modalSubBody = document.createElement("div");
     modalSubBody.setAttribute("class", "container-fluid");
+    modalSubBody.setAttribute("id", "superContainer");
     modalBody.appendChild(modalSubBody);
   
   //Creating the sub body row
@@ -231,7 +232,7 @@ for (i in clubNamesArray) {
 
   //Creating left image div
     leftImageDiv = document.createElement("div");
-    leftImageDiv.setAttribute("class", "col-xl-3 col-lg-4 col-md-3 col-sm-10");
+    leftImageDiv.setAttribute("class", "col-xl-3 col-lg-6 col-md-7 col-sm-10");
     leftImage = document.createElement("img");
     leftImage.setAttribute("style", "width: 100%; padding: 0px; margin: 0px;");
     leftImage.src=this[CSSObjectName].leftImage;
@@ -240,7 +241,7 @@ for (i in clubNamesArray) {
   
   //Creating long desc div
     longDescDiv = document.createElement("div");
-    longDescDiv.setAttribute("class", "col-xl-6 col-lg-4 col-md-6 col-sm-10 description");
+    longDescDiv.setAttribute("class", "col-xl-6 col-lg-10 col-md-12 col-sm-10 description");
     longDesc = document.createElement("p");
     longDescText = document.createTextNode(this[CSSObjectName].longDesc);
     longDesc.setAttribute("class", "modaldesc");
@@ -250,7 +251,7 @@ for (i in clubNamesArray) {
 
   //creating right image div
     rightImageDiv = document.createElement("div");
-    rightImageDiv.setAttribute("class", "col-xl-3 col-lg-4 col-md-3 col-sm-10");
+    rightImageDiv.setAttribute("class", "col-xl-3 col-lg-6 col-md-7 col-sm-10");
     rightImage = document.createElement("img");
     rightImage.setAttribute("style", "width: 100%; padding: 0px; margin: 0px;");
     rightImage.src=this[CSSObjectName].rightImage;
