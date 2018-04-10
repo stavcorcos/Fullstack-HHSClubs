@@ -305,12 +305,15 @@ for (i in clubNamesArray) {
   //Buttons to close the modal
     var closebuttons = document.getElementsByClassName("close-button");
     var closebuttonsCount = closebuttons.length;
-    for (var j = 0; j< closebuttonsCount; j++) {
+    for (var j = 0; j < closebuttonsCount; j++) {
       closebuttons[j].onclick = function() {
-        modalBackground.setAttribute("id", this.id + "-modal")
-        var modalItself = document.getElementById( this.id + "-modal");
+        modalButton = this;
+        modalBackground = modalButton.parentElement.parentElement;
+        modalBackground.setAttribute("id", this.id + "-modal");
+        var modalItself = document.getElementById(this.id + "-modal");
         modalItself.style.display = "none";
-        modalBackground.setAttribute("id", noSpaceClub + "-button-modal");
+        originalClub = this.id.substring(6,9999);
+        modalBackground.setAttribute("id", originalClub + "-button-modal");
       }
     }
 
