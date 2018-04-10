@@ -75,11 +75,11 @@
     list-style: none;
     padding-left: 10px;
     text-align: center;
-
+    padding-bottom: 20px;
 }
 
 .desc-list li { 
-    padding-left: 16px; 
+    padding-left: 16px;
 }
 
 .desc-list li:before {
@@ -95,8 +95,9 @@
 }
 
 .modaldesc {
+    padding-top: 20px;
     font-size: 1.2rem;
-    text-align: center;
+    text-align: justify;
 }
 
 @-webkit-keyframes slideIn {

@@ -1,8 +1,8 @@
 <?php 
-$servername = getenv("herokuServer");
-$username = getenv("herokuUser");
-$password = getenv("herokuPass");
-$dbName = getenv("herokuDB");
+$servername = "localhost";
+$username = "root";
+$password = "1998St@v";
+$dbName = "hhsclubdata";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbName);
@@ -25,13 +25,12 @@ $shortDesc = mysqli_real_escape_string($conn, $_POST["shortDesc"]);
 $clubIcon = mysqli_real_escape_string($conn, $_POST["icon"]);
 $leftImage = mysqli_real_escape_string($conn, $_POST["left"]);
 $longDesc = mysqli_real_escape_string($conn, $_POST["longDesc"]);
-$rightImage = mysqli_real_escape_string($conn, $_POST["right"]);
 $room = mysqli_real_escape_string($conn, $_POST["room"]);
 $times = mysqli_real_escape_string($conn, $_POST["times"]);
 $advisor = mysqli_real_escape_string($conn, $_POST["advisor"]);
 $email = mysqli_real_escape_string($conn, $_POST["email"]);
 
-$sql = "INSERT INTO HHSClubData (clubName, shortDesc, clubIcon, leftImage, longDesc, rightImage, room, times, advisor, email) VALUES ('$clubName', '$shortDesc', '$clubIcon', '$leftImage', '$longDesc', '$rightImage', '$room', '$times', '$advisor', '$email')";
+$sql = "INSERT INTO HHSClubData (clubName, shortDesc, clubIcon, leftImage, longDesc, room, times, advisor, email) VALUES ('$clubName', '$shortDesc', '$clubIcon', '$leftImage', '$longDesc', '$room', '$times', '$advisor', '$email')";
 
 if($conn->query($sql)) {
     echo "<h1 style = 'text-align: center; color: white;'> You've successfully added a club! </h1>";

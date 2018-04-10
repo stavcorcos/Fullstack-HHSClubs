@@ -1,8 +1,8 @@
 <?php
-$servername = getenv("herokuServer");
-$username = getenv("herokuUser");
-$password = getenv("herokuPass");
-$dbName = getenv("herokuDB");
+$servername = "localhost";
+$username = "root";
+$password = "1998St@v";
+$dbName = "hhsclubdata";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbName);
@@ -15,8 +15,6 @@ $iconquery= "SELECT clubIcon FROM HHSClubData";
 $iconresults = $conn->query($iconquery);
 $leftquery= "SELECT leftImage FROM HHSClubData";
 $leftresults = $conn->query($leftquery);
-$rightquery= "SELECT rightImage FROM HHSClubData";
-$rightresults = $conn->query($rightquery);
 $longquery= "SELECT longDesc FROM HHSClubData";
 $longresults = $conn->query($longquery);
 $roomquery= "SELECT room FROM HHSClubData";
@@ -47,10 +45,6 @@ while($rowp = $iconresults->fetch_assoc()) {
 $leftObject = array();
 while($rowa = $leftresults->fetch_assoc()) {
     $leftObject[] = $rowa;
-}
-$rightObject = array();
-while($rowb = $rightresults->fetch_assoc()) {
-    $rightObject[] = $rowb;
 }
 $longObject = array();
 while($rowc = $longresults->fetch_assoc()) {
@@ -111,7 +105,6 @@ var shortDescObject = <?php echo json_encode($shortObject) ?>;
 var clubIconsObject = <?php echo json_encode($iconObject) ?>;
 var leftImageObject = <?php echo json_encode($leftObject) ?>;
 var longDescObject = <?php echo json_encode($longObject) ?>;
-var rightImageObject = <?php echo json_encode($rightObject) ?>;
 var roomObject = <?php echo json_encode($roomObject) ?>;
 var timesObject = <?php echo json_encode($timesObject) ?>;
 var advisorObject = <?php echo json_encode($advisorObject) ?>;

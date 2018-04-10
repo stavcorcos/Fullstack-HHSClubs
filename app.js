@@ -83,8 +83,6 @@ clubLeftImageArray = [];
 objectToArray(leftImageObject, clubLeftImageArray);
 clubLongDescArray = [];
 objectToArray(longDescObject, clubLongDescArray);
-clubRightImageArray = [];
-objectToArray(rightImageObject, clubRightImageArray);
 clubRoomArray = [];
 objectToArray(roomObject, clubRoomArray);
 clubTimesArray = [];
@@ -111,7 +109,6 @@ for (let i = 0; i < clubNamesArray.length; i++) {
     backImage: clubIconsArray[i],
     leftImage: clubLeftImageArray[i],
     longDesc: clubLongDescArray[i],
-    rightImage: clubRightImageArray[i],
     room: clubRoomArray[i],
     times: clubTimesArray[i],
     advisor: clubAdvisorArray[i],
@@ -143,7 +140,7 @@ for (i in clubNamesArray) {
 
   //Creating the first div
     flexibleSpacing = document.createElement("div");
-    flexibleSpacing.setAttribute("class", "col-xl-3 col-lg-4 col-md-6 col-sm-6");
+    flexibleSpacing.setAttribute("class", "col-xl-3 col-lg-4 col-md-6 col-sm-8");
     clubContainer.appendChild(flexibleSpacing);
 
   //Creating the second div
@@ -232,7 +229,7 @@ for (i in clubNamesArray) {
 
   //Creating left image div
     leftImageDiv = document.createElement("div");
-    leftImageDiv.setAttribute("class", "col-xl-3 col-lg-6 col-md-7 col-sm-10");
+    leftImageDiv.setAttribute("class", "col-xl-3 col-lg-4 col-md-5 col-sm-6");
     leftImage = document.createElement("img");
     leftImage.setAttribute("style", "width: 100%; padding: 0px; margin: 0px;");
     leftImage.src=this[CSSObjectName].leftImage;
@@ -241,22 +238,13 @@ for (i in clubNamesArray) {
   
   //Creating long desc div
     longDescDiv = document.createElement("div");
-    longDescDiv.setAttribute("class", "col-xl-6 col-lg-10 col-md-12 col-sm-10 description");
+    longDescDiv.setAttribute("class", "col-xl-8 col-lg-11 col-md-11 col-sm-11 description");
     longDesc = document.createElement("p");
     longDescText = document.createTextNode(this[CSSObjectName].longDesc);
     longDesc.setAttribute("class", "modaldesc");
     longDesc.appendChild(longDescText);
     longDescDiv.appendChild(longDesc);
     modalRow.appendChild(longDescDiv);
-
-  //creating right image div
-    rightImageDiv = document.createElement("div");
-    rightImageDiv.setAttribute("class", "col-xl-3 col-lg-6 col-md-7 col-sm-10");
-    rightImage = document.createElement("img");
-    rightImage.setAttribute("style", "width: 100%; padding: 0px; margin: 0px;");
-    rightImage.src=this[CSSObjectName].rightImage;
-    rightImageDiv.appendChild(rightImage);
-    modalRow.appendChild(rightImageDiv);
 
   //Creating the list
     clubInfoList = document.createElement("ul");
