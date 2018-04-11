@@ -73,7 +73,7 @@ $results = $conn->query($query);
     echo "</div>";
     echo "<form style = 'text-align: center;'action = 'password.php' method='post'>";
     echo "<input placeholder = 'Your email' type = 'email' required name='email'>" . "<br> <br>";
-    echo "<input class = 'btn btn-md btn-superCustom' type='submit' value = 'Reset Password'>";
+    echo "<input class = 'btn btn-md btnsuperCustom' type='submit' value = 'Reset Password'>";
     echo "</form>";
     echo "</div>";
     echo "</div>";

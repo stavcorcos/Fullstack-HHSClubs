@@ -65,7 +65,7 @@ echo "<h1 style = 'text-align: center; color: white;'>Record this password somew
 }
 
 $subject = 'HHSClubs Password Reset';
-$message = 'Your new password is' . $newpassword;
+$message = 'Your new password is: ' . $newpassword;
 $headers = 'From: Poonchys@gmail.com' . "\r\n" .
     'Reply-To: Poonchys@gmail.com' . "\r\n" .
     'X-Mailer: PHP/' . phpversion();

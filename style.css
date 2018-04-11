@@ -430,14 +430,14 @@ body {
     cursor: pointer;
 }
 
-.btn-superCustom{
+.btnsuperCustom {
     color: #fff;
     background-color: rgb(194, 0, 0);
     border-color: rgb(194, 0, 0);
     cursor: pointer;
 }
 
-.btn-superCustom:hover{
+.btnsuperCustom:hover {
     color: #fff;
     background-color: rgb(154, 0, 0);
     border-color: rgb(154, 0, 0);
