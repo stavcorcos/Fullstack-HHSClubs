@@ -1,9 +1,9 @@
 <?php
 session_start();
-$servername = getenv("herokuServer");
-$username = getenv("herokuUser");
-$password = getenv("herokuPass");
-$dbName = getenv("herokuDB");
+$servername = "localhost";
+$username = "root";
+$password = "1998St@v";
+$dbName = "hhsclubdata";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbName);
@@ -98,7 +98,8 @@ while($rowu = $emailresults->fetch_assoc()) {
     </div>
 </nav>
 <div class="jumbotron">
-    <img style = "width: 100%; height: auto; margin: 0; padding: 0;" src="Images/header.png">
+    <img style = "width: 100%; height: auto; margin: 0; padding: 0;" src="Images/header.png" id = "cpuheader">
+    <img style = "width: 100%; height: auto; margin: 0; padding: 0;" src="Images\ClubsHeaderMobile.png" id = "mobileheader">
 </div>
 <script type="text/javascript">
 var clubNamesObject = <?php echo json_encode($nameObject) ?>;
@@ -129,7 +130,7 @@ var emailObject = <?php echo json_encode($emailObject) ?>;
     <div class="container">
         <div class="row justify-content-center align-items-center">
             <span class = "copyright" >2018 HHSClubs</span>
-            <span><a class="copyright" target="_blank" href = "https://github.com/Poonchy">&copy; Stav Corcos</a></span>
+            <span><a class="copyright" target="_blank" href = "https://github.com/Poonchy">&copy; Stav Corcos 2018</a></span>
             <a href="edit.php" id="editBtn"><button class = "btn btn-md btn-custom">Add or delete a club</button></a>
         </div>
     </div>

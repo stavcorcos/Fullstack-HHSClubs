@@ -61,16 +61,8 @@ $newpassword = generateStrongPassword();
 $insertnew = "INSERT INTO authorization (username, password) VALUES ('$fusername', '$newpassword');";
 if ($conn->query($insertnew)) {
 echo "<h1 style = 'text-align: center; color: white;'>You've created a new password: " . "$newpassword" .  "</h1>";
-echo "<h1 style = 'text-align: center; color: white;'>Record this password somewhere safe, you've also been emailed the password.</h1>";
+echo "<h1 style = 'text-align: center; color: white;'>Record this password somewhere safe.</h1>";
 }
-
-$subject = "HHSClubs Password Reset";
-$message = "Your new password is: $newpassword";
-$headers = "From: Poonchys@gmail.com" . "\r\n" .
-    "Reply-To: Poonchys@gmail.com" . "\r\n" .
-	"X-Mailer: PHP/" . phpversion();
-
-mail($email, $subject, $message, $headers);
 
 ?>
 <html>

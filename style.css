@@ -430,6 +430,24 @@ body {
     cursor: pointer;
 }
 
+#cpuheader {
+    display: block;
+}
+
+#mobileheader {
+    display: none;
+}
+
+@media (max-width: 576px) {
+    #cpuheader {
+        display: none;
+    }
+    
+    #mobileheader {
+        display: block;
+    } 
+}
+
 .btnsuperCustom {
     color: #fff;
     background-color: rgb(194, 0, 0);
