@@ -346,7 +346,7 @@ projectHoverContent = document.createElement("div");
 projectHoverContent.setAttribute("class", "project-hover");
 projectAnimated.appendChild(projectHoverContent);
 
-//Creating hover short description
+//Creating the credits hover
 firstP = document.createElement("p");
 firstP.setAttribute("id", "creditdesc")
 firstPT = document.createTextNode("Created by ");

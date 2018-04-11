@@ -57,3 +57,7 @@ if($conn->query($sql)) {
 </div>
 </div>
 </html>
+<?php
+session_unset();
+mysqli_close($conn);
+?>

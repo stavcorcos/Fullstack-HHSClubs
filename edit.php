@@ -2,7 +2,7 @@
 if(!isset($_SESSION['username'])){
    header("Location:login.php");
 } 
-session_unset();?>
+?>
 
 <?php
 $servername = getenv("herokuServer");
@@ -64,6 +64,20 @@ $results = $conn->query($query);
 </div>
 </div>
 </div>
+<br>
+<?php if ($_SESSION['username'] == "master") {
+    echo "<div class = 'container'>";
+    echo "<div class = 'row justify-content-center'>";
+    echo "<div class = 'col-xl-12 col-lg-12 col-md-12 col-sm-12'>";
+    echo "<h1 style = 'text-align: center; color: white;'> Reset non-admin password. </h1>" . "<br>";
+    echo "</div>";
+    echo "<form style = 'text-align: center;'action = 'password.php' method='post'>";
+    echo "<input placeholder = 'Your email' type = 'email' required name='email'>" . "<br> <br>";
+    echo "<input class = 'btn btn-md btn-superCustom' type='submit' value = 'Reset Password'>";
+    echo "</form>";
+    echo "</div>";
+    echo "</div>";
+}?>
 <br>
 <script type="text/javascript">
 var observe;
@@ -133,3 +147,7 @@ function inittwo () {
 </script>
 </body>
 </html>
+
+<?php
+mysqli_close($conn);
+?>

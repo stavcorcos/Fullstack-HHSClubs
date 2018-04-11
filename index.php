@@ -1,4 +1,5 @@
 <?php
+session_start();
 $servername = getenv("herokuServer");
 $username = getenv("herokuUser");
 $password = getenv("herokuPass");
@@ -135,3 +136,7 @@ var emailObject = <?php echo json_encode($emailObject) ?>;
 </footer>
 </body>
 </html>
+<?php
+session_unset();
+mysqli_close($conn);
+?>

@@ -430,10 +430,17 @@ body {
     cursor: pointer;
 }
 
-.btn-custom:hover{
+.btn-superCustom{
     color: #fff;
-    background-color: rgb(46,75,129);
-    border-color: rgb(46,75,129);
+    background-color: rgb(194, 0, 0);
+    border-color: rgb(194, 0, 0);
+    cursor: pointer;
+}
+
+.btn-superCustom:hover{
+    color: #fff;
+    background-color: rgb(154, 0, 0);
+    border-color: rgb(154, 0, 0);
 }
 
 .btn-submit-custom{
