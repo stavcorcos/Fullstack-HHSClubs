@@ -224,21 +224,21 @@ for (i in clubNamesArray) {
   
   //Creating the sub body row
     modalRow = document.createElement("div");
-    modalRow.setAttribute("class", "row justify-content-around align-items-center");
+    modalRow.setAttribute("class", "row justify-content-center");
     modalSubBody.appendChild(modalRow);
 
   //Creating left image div
     leftImageDiv = document.createElement("div");
-    leftImageDiv.setAttribute("class", "col-xl-3 col-lg-4 col-md-5 col-sm-6");
+    leftImageDiv.setAttribute("class", "col-xl-10 col-lg-10 col-md-10 col-sm-11");
     leftImage = document.createElement("img");
-    leftImage.setAttribute("style", "width: 100%; padding: 0px; margin: 0px;");
+    leftImage.setAttribute("style", "width: 100%; padding-top: 20px; margin: 0px;");
     leftImage.src=this[CSSObjectName].leftImage;
     leftImageDiv.appendChild(leftImage);
     modalRow.appendChild(leftImageDiv);
   
   //Creating long desc div
     longDescDiv = document.createElement("div");
-    longDescDiv.setAttribute("class", "col-xl-8 col-lg-11 col-md-11 col-sm-11 description");
+    longDescDiv.setAttribute("class", "col-xl-10 col-lg-10 col-md-10 col-sm-11 description");
     longDesc = document.createElement("p");
     longDescText = document.createTextNode(this[CSSObjectName].longDesc);
     longDesc.setAttribute("class", "modaldesc");
