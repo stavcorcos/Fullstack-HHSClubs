@@ -1,9 +1,9 @@
 <?php
 session_start();
-$servername = "localhost";
-$username = "root";
-$password = "1998St@v";
-$dbName = "hhsclubdata";
+$servername = getenv("herokuServer");
+$username = getenv("herokuUser");
+$password = getenv("herokuPass");
+$dbName = getenv("herokuDB");
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbName);
