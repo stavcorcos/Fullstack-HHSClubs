@@ -64,11 +64,11 @@ echo "<h1 style = 'text-align: center; color: white;'>You've created a new passw
 echo "<h1 style = 'text-align: center; color: white;'>Record this password somewhere safe, you've also been emailed the password.</h1>";
 }
 
-$subject = 'HHSClubs Password Reset';
-$message = 'Your new password is: ' . $newpassword;
-$headers = 'From: Poonchys@gmail.com' . "\r\n" .
-    'Reply-To: Poonchys@gmail.com' . "\r\n" .
-    'X-Mailer: PHP/' . phpversion();
+$subject = "HHSClubs Password Reset";
+$message = "Your new password is: $newpassword";
+$headers = "From: Poonchys@gmail.com" . "\r\n" .
+    "Reply-To: Poonchys@gmail.com" . "\r\n" .
+	"X-Mailer: PHP/" . phpversion();
 
 mail($email, $subject, $message, $headers);
 
