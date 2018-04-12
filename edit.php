@@ -30,6 +30,7 @@ $results = $conn->query($query);
         <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+        <script src='https://www.google.com/recaptcha/api.js'></script>
     </head>
 <body onload="init(), inittwo()" id = "body">
 
@@ -71,15 +72,17 @@ $results = $conn->query($query);
     echo "<div class = 'col-xl-12 col-lg-12 col-md-12 col-sm-12'>";
     echo "<h1 style = 'text-align: center; color: white;'> Reset non-admin password. </h1>" . "<br>";
     echo "</div>";
-    echo "<form style = 'text-align: center;'action = 'password.php' method='post'>";
-    echo "<input placeholder = 'Your email' type = 'email' required name='email'>" . "<br> <br>";
-    echo "<input class = 'btn btn-md btnsuperCustom' type='submit' value = 'Reset Password'>";
+    echo "<form onsubmit='checkCaptcha()' style = 'text-align: center;'action = 'password.php' method='post'>";
+    echo "<div id = 'recaptcha' class='g-recaptcha' data-sitekey='6LfarFIUAAAAAOROsAVMC76_4iM0XWS97IcWUx6x'></div> <br>";
+    echo "<input id = 'verifiedc' class = 'btn btn-md btnsuperCustom' type='submit' value = 'Reset Password'>";
     echo "</form>";
     echo "</div>";
     echo "</div>";
 }?>
 <br>
 <script type="text/javascript">
+function checkCaptcha() {
+if (grecaptcha.getResponse() == ""){event.preventDefault()}else{}}
 var observe;
 if (window.attachEvent) {
     observe = function (element, event, handler) {
