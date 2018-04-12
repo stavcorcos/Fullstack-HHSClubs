@@ -321,7 +321,7 @@ for (i in clubNamesArray) {
   }
 //Creating the first div
 flexibleSpacing = document.createElement("div");
-flexibleSpacing.setAttribute("class", "col-xl-3 col-lg-4 col-md-6 col-sm-6");
+flexibleSpacing.setAttribute("class", "col-xl-3 col-lg-4 col-md-6 col-sm-8");
 clubContainer.appendChild(flexibleSpacing);
 
 //Creating the second div
