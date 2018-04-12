@@ -100,6 +100,7 @@ for (let i = 0; i < clubNamesArray.length; i++) {
   let s = 0
   for (s; s < noSpaceClub.length; s++) {
       noSpaceClub = noSpaceClub.replace(" ", "");
+      noSpaceClub = noSpaceClub.replace("'", "");
   }
   noSpaceClub = noSpaceClub.toLowerCase();
   window[noSpaceClub] = {
@@ -129,6 +130,7 @@ for (i in clubNamesArray) {
     let s = 0
     for (s; s < noSpaceClub.length; s++) {
         noSpaceClub = noSpaceClub.replace(" ", "");
+        noSpaceClub = noSpaceClub.replace("'", "");
     }
     noSpaceClub = noSpaceClub.toLowerCase();
 
