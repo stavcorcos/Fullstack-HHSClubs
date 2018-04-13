@@ -60,7 +60,8 @@ function generateStrongPassword($length = 9, $add_dashes = true, $available_sets
 $newpassword = generateStrongPassword();
 $insertnew = "INSERT INTO authorization (username, password) VALUES ('$fusername', '$newpassword');";
 if ($conn->query($insertnew)) {
-echo "<h1 style = 'text-align: center; color: white;'>You've created a new password: " . "$newpassword" .  "</h1>";
+echo "<h1 style = 'text-align: center; color: white;'>The account's name: $fusername </h1>";
+echo "<h1 style = 'text-align: center; color: white;'>You've created a new password: $newpassword </h1>";
 echo "<h1 style = 'text-align: center; color: white;'>Record this password somewhere safe.</h1>";
 }
 
