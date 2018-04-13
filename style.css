@@ -86,8 +86,6 @@
 
 }
 [data-tip]:before {
-	content:'';
-	/* hides the tooltip when not hovered */
 	display:none;
 	content:'';
 	border-left: 5px solid transparent;
