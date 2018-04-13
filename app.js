@@ -105,7 +105,7 @@ for (let i = 0; i < clubNamesArray.length; i++) {
   noSpaceClub = noSpaceClub.toLowerCase();
   window[noSpaceClub] = {
     nospace: noSpaceClub,
-    name: clubNamesArray[i],
+    name: clubNamesArray[i].charAt(0).toUpperCase(),
     shortDesc: clubShortDescArray[i],
     backImage: clubIconsArray[i],
     leftImage: clubLeftImageArray[i],
