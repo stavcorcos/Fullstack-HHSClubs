@@ -91,14 +91,17 @@ clubAdvisorArray = [];
 objectToArray(advisorObject, clubAdvisorArray);
 clubEmailArray = [];
 objectToArray(emailObject, clubEmailArray);
-
+function toTitleCase(str)
+{
+    return str.replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();});
+}
 
 
 for (let i = 0; i < clubNamesArray.length; i++) {
   let noSpaceClub
   noSpaceClub = clubNamesArray[i];
-  clubNamesArray[i] = clubNamesArray[i].charAt(0).toUpperCase() + clubNamesArray[i].slice(1)
-  let s = 0
+  clubNamesArray[i] = toTitleCase(str);
+  let s = 0;
   for (s; s < noSpaceClub.length; s++) {
       noSpaceClub = noSpaceClub.replace(" ", "");
       noSpaceClub = noSpaceClub.replace("'", "");
