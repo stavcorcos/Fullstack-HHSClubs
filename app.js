@@ -97,6 +97,7 @@ objectToArray(emailObject, clubEmailArray);
 for (let i = 0; i < clubNamesArray.length; i++) {
   let noSpaceClub
   noSpaceClub = clubNamesArray[i];
+  clubNamesArray[i].charAt(0).toUpperCase() + clubNamesArray[i].slice(1)
   let s = 0
   for (s; s < noSpaceClub.length; s++) {
       noSpaceClub = noSpaceClub.replace(" ", "");
@@ -105,7 +106,7 @@ for (let i = 0; i < clubNamesArray.length; i++) {
   noSpaceClub = noSpaceClub.toLowerCase();
   window[noSpaceClub] = {
     nospace: noSpaceClub,
-    name: clubNamesArray[i].charAt(0).toUpperCase() + clubNamesArray[i].slice(1),
+    name: clubNamesArray[i],
     shortDesc: clubShortDescArray[i],
     backImage: clubIconsArray[i],
     leftImage: clubLeftImageArray[i],
