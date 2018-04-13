@@ -100,7 +100,7 @@ function toTitleCase(str)
 for (let i = 0; i < clubNamesArray.length; i++) {
   let noSpaceClub
   noSpaceClub = clubNamesArray[i];
-  clubNamesArray[i] = toTitleCase(str);
+  clubNamesArray[i] = toTitleCase(clubNamesArray[i]);
   let s = 0;
   for (s; s < noSpaceClub.length; s++) {
       noSpaceClub = noSpaceClub.replace(" ", "");
