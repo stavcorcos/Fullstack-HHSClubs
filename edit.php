@@ -39,13 +39,13 @@ $results = $conn->query($query);
 <div class = "col-xl-6 col-lg-6 col-md-7 col-sm-12">
     <h1 style = "text-align: center; color: white;"> Add a club. </h1>
     <form style = "text-align: center;"action = "insert.php" method="post">
-        <input placeholder = "Club name..." style = "width: 100%;" type = "text" required name="name"><br><br>
-        <textarea row="1" id="text" placeholder = "A short description to catch a student's attention." style = "width: 100%; resize: none; overflow: hidden; outline: none;" type = "text" required name="shortDesc"></textarea><br><br>
-        <input pattern="(?:([^:/?#]+):)?(?://([^/?#]*))?([^?#]*\.(?:jpg|gif|png|jpeg))(?:\?([^#]*))?(?:#(.*))?" placeholder = "Background image URL, must end with .png, .jpg, or .gif!" style = "width: 100%;" type = "text" required name="icon"><br><br>
-        <input pattern="(?:([^:/?#]+):)?(?://([^/?#]*))?([^?#]*\.(?:jpg|gif|png|jpeg))(?:\?([^#]*))?(?:#(.*))?" placeholder = "Top image URL, must end with .png, .jpg, or .gif!" style = "width: 100%;" type = "text" required name="left"><br><br>
-        <textarea row="1" id="texttwo" placeholder = "A long description to tell students about the club." style = "width: 100%; resize: none; overflow: hidden; outline: none;" type = "text" required name="longDesc"></textarea><br><br>
+        <input placeholder = "Club name." style = "width: 100%;" type = "text" required name="name"><br><br>
+        <textarea row="1" id="text" placeholder = "A short hook to catch a student's attention." style = "width: 100%; resize: none; overflow: hidden; outline: none;" type = "text" required name="shortDesc"></textarea><br><br>
+        <div data-tip="Right click on an image, click 'Open image in new tab', and copy paste that link. If you want to upload your own image, do so on another site and follow these instructions (sites like imgur or imgbb)."><input pattern="(?:([^:/?#]+):)?(?://([^/?#]*))?([^?#]*\.(?:jpg|gif|png|jpeg))(?:\?([^#]*))?(?:#(.*))?" placeholder = "Main Clubs Page Image URL, must end with .png, .jpg, or .gif!" style = "width: 100%;" type = "text" required name="icon"></div><br>
+        <div data-tip="Right click on an image, click 'Open image in new tab', and copy paste that link. If you want to upload your own image, do so on another site and follow these instructions (sites like imgur or imgbb)."><input pattern="(?:([^:/?#]+):)?(?://([^/?#]*))?([^?#]*\.(?:jpg|gif|png|jpeg))(?:\?([^#]*))?(?:#(.*))?" placeholder = "Top image URL, must end with .png, .jpg, or .gif!" style = "width: 100%;" type = "text" required name="left"></div><br>
+        <textarea row="1" id="texttwo" placeholder = "A long description to tell students about the club. Fill this out thoughroughly!" style = "width: 100%; resize: none; overflow: hidden; outline: none;" type = "text" required name="longDesc"></textarea><br><br>
         <input placeholder = "Room # or location of rendevouz." style = "width: 100%;" type = "text" required name="room"><br><br>
-        <input placeholder = "What times and on what days does the club meet?" style = "width: 100%;" type = "text" required name="times"><br><br>
+        <input placeholder = "What times and on what days does the club meet? Times: " style = "width: 100%;" type = "text" required name="times"><br><br>
         <input placeholder = "What is the advisor's name?" style = "width: 100%;" type = "text" required name="advisor"><br><br>
         <input placeholder = "Advisor's contact information" style = "width: 100%;" type = "email" required name="email"><br><br>
         <input  class = "btn btn-md btn-submit-custom" type="submit">
