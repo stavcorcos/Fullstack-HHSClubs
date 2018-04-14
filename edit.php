@@ -60,11 +60,15 @@ $results = $conn->query($query);
 <div class = "col-xl-6 col-lg-6 col-md-5 col-sm-12">
 <h1 style = "text-align: center; color: white;"> Delete a club. </h1>
 <form style = "text-align: center;" action = "delete.php" method="post">
+    <div class = "row justify-content-center">
     <?php 
         while($rows = $results->fetch_assoc()) {
+            echo "<div class = 'col-6'>";
             echo "<input style = 'color: white;' required type = 'radio' name='delclub' value='" . $rows["clubName"] . "'>" . "<span style = 'color: white; font-size: 20px;'>" . $rows["clubName"] . "</span>" . "<br>";
+            echo "</div>";
         }
     ?>
+    </div>
     <br>
     <input  class = "btn btn-md btn-submit-custom" type="submit">
 </form>
