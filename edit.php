@@ -70,7 +70,9 @@ $results = $conn->query($query);
     ?>
     </div>
     <br>
+    <div style = "text-align: center">
     <input  class = "btn btn-md btn-submit-custom" type="submit">
+    </div>
 </form>
 </div>
 </div>
