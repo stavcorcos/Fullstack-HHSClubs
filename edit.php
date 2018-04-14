@@ -33,7 +33,11 @@ $results = $conn->query($query);
         <script src='https://www.google.com/recaptcha/api.js'></script>
     </head>
 <body onload="init(), inittwo()" id = "body">
-
+<div class = "container">
+<div class = "row justify-content-center">
+    <a href = "index.php"><button class = "btn btn-md btn-submit-custom">Back to main page</button></a>
+</div>
+</div>
 <div class = "container">
 <div class = "row justify-content-center">
 <div class = "col-xl-6 col-lg-6 col-md-7 col-sm-12">
