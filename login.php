@@ -13,6 +13,12 @@
     </head>
     <body>
         <br>
+        <div class = "container">
+        <div class = "row justify-content-center">
+            <a href = "index.php"><button class = "btn btn-md btn-submit-custom">Back to main page</button></a>
+        </div>
+        </div>
+        <br>
         <h1 style = "color: white; text-align: center;">Authorization</h1>
         <form style = "text-align: center;"method="post" action="authorization.php">
         Username: <input name="username"><br><br>
