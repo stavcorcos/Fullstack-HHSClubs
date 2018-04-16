@@ -18,7 +18,7 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-$query= "SELECT clubName FROM HHSClubData";
+$query= "SELECT clubName FROM HHSClubData ORDER BY clubName;";
 $results = $conn->query($query);
 
 ?>
