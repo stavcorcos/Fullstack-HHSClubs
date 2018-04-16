@@ -334,6 +334,9 @@ body {
     .googletranslate {
         margin-bottom: 10px;
     }
+    .modalheader {
+        padding-right: 35px;
+    }
 }
 
 @media (max-width: 432px) {
