@@ -1,4 +1,9 @@
 <?php
+if(!isset($_SERVER['HTTPS'])) { 
+    header('Location: https://hhsclubs.herokuapp.com/index.php');
+    exit;
+    die;
+}
 session_start();
 $servername = getenv("herokuServer");
 $username = getenv("herokuUser");
