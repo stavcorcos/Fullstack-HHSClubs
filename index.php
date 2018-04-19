@@ -1,9 +1,17 @@
 <?php
-if(empty($_SERVER['HTTPS']) || $_SERVER['HTTPS'] == "off"){
+function shapeSpace_check_https() {
+	if ((!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') || $_SERVER['SERVER_PORT'] == 443) {
+		return true; 
+	}
+	return false;
+}
+if (shapeSpace_check_https()) {
+} else {
     $redirect = 'https://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
     header('HTTP/1.1 301 Moved Permanently');
     header('Location: ' . $redirect);
     exit();
+    die;
 }
 session_start();
 $servername = getenv("herokuServer");
