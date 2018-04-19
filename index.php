@@ -1,5 +1,5 @@
 <?php
-if(!isset($_SERVER['HTTPS'])) { 
+if ($_SERVER['HTTP_X_FORWARDED_PROTO'] != "https") {
     header('Location: https://hhsclubs.herokuapp.com/index.php');
     exit;
     die;
