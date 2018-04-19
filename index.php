@@ -1,10 +1,11 @@
 <?php
-session_start();
-if($_SERVER["HTTPS"] != "on")
-{
-    header("Location: https://" . $_SERVER["HTTP_HOST"] . $_SERVER["REQUEST_URI"]);
+if(empty($_SERVER['HTTPS']) || $_SERVER['HTTPS'] == "off"){
+    $redirect = 'https://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
+    header('HTTP/1.1 301 Moved Permanently');
+    header('Location: ' . $redirect);
     exit();
 }
+session_start();
 $servername = getenv("herokuServer");
 $username = getenv("herokuUser");
 $password = getenv("herokuPass");
