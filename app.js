@@ -378,12 +378,12 @@ firstP.appendChild(lunithA);
 thirdPT = document.createTextNode(" and ");
 firstP.appendChild(thirdPT);
 
-/* kathrynA = document.createElement("a");
+kathrynA = document.createElement("a");
 kathrynA.setAttribute("href", "https://livingsoloved.com");
 kathrynA.setAttribute("target", "_blank");
 kathrynAP = document.createTextNode("Kathryn McCarn.");
 kathrynA.appendChild(kathrynAP);
-firstP.appendChild(kathrynA); */
+firstP.appendChild(kathrynA);
 
 
 projectHoverContent.appendChild(firstP);
