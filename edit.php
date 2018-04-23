@@ -65,7 +65,7 @@ $resultstwo = $conn->query($query);
     <div class = "row">
     <?php 
         while($rows = $results->fetch_assoc()) {
-            echo "<div class = 'col-6'>";
+            echo "<div class = 'col-xl-6 col-lg-6 col-md-12 col-sm-12'>";
             echo "<input style = 'color: white;' required type = 'radio' name='delclub' value='" . $rows["clubName"] . "'>" . "<span style = 'color: white; font-size: 20px;'>" . $rows["clubName"] . "</span>" . "<br>";
             echo "</div>";
         }
@@ -77,7 +77,7 @@ $resultstwo = $conn->query($query);
     </div>
 </form>
 </div>
-<div class = "col-xl-6 col-lg-6 col-md-5 col-sm-12">
+<div class = "col-xl-6 col-lg-6 col-md-12 col-sm-12">
 <h1 style = "text-align: center; color: white;"> Edit a club. </h1>
 <form action = "editing.php" method="post">
     <div class = "row">
