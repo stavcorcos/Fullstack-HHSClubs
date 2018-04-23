@@ -127,7 +127,7 @@ var emailObject = <?php echo json_encode($emailObject) ?>;
         <div class="row justify-content-between align-items-center">
             <span class = "copyright" >2018 HHSClubs</span>
             <a href="edit.php" id="editBtn"><button class = "btn btn-md btn-custom">Add or delete a club</button></a>
-            <span><a class="copyright" target="_blank" href = "https://github.com/Poonchy">&copy; Stav Corcos</a></span>
+            <span><a class="copyright" target="_blank" href = "https://github.com/Poonchy">&copy;Poonchy</a></span>
         </div>
     </div>
 </footer>
@@ -135,7 +135,7 @@ var emailObject = <?php echo json_encode($emailObject) ?>;
     <div class="container">
         <div class="row justify-content-center align-items-center">
             <span class = "copyright" >2018 HHSClubs</span>
-            <span><a class="copyright" target="_blank" href = "https://github.com/Poonchy">&copy; Stav Corcos 2018</a></span>
+            <span><a class="copyright" target="_blank" href = "https://github.com/Poonchy">&copy;Poonchy</a></span>
             <a href="edit.php" id="editBtn"><button class = "btn btn-md btn-custom">Add or delete a club</button></a>
         </div>
     </div>
