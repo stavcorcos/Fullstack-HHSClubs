@@ -78,7 +78,7 @@ while($rowu = $emailresults->fetch_assoc()) {
     <head>
         <title>HHS Clubs</title>
         <meta name="description" content="A place to view all the highschool's clubs.">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
         <link rel="stylesheet" href = "style.css">
         <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Passion+One" rel="stylesheet">
