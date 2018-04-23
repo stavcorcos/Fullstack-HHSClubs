@@ -77,13 +77,13 @@ $resultstwo = $conn->query($query);
     </div>
 </form>
 </div>
-<div class = "col-xl-6 col-lg-6 col-md-12 col-sm-12">
+<div class = "col-xl-6 col-lg-6 col-md-5 col-sm-12">
 <h1 style = "text-align: center; color: white;"> Edit a club. </h1>
 <form action = "editing.php" method="post">
     <div class = "row">
     <?php 
         while($rowu = $resultstwo->fetch_assoc()) {
-            echo "<div class = 'col-6'>";
+            echo "<div class = 'col-xl-6 col-lg-6 col-md-12 col-sm-12'>";
             echo "<input style = 'color: white;' required type = 'radio' name='editclub' value='" . $rowu["clubName"] . "'>" . "<span style = 'color: white; font-size: 20px;'>" . $rowu["clubName"] . "</span>" . "<br>";
             echo "</div>";
         }
