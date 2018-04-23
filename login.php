@@ -1,3 +1,10 @@
+<?php
+if ($_SERVER['HTTP_X_FORWARDED_PROTO'] != "https") {
+    header('Location: https://hhsclubs.herokuapp.com/login.php');
+    exit;
+    die;
+}
+?>
 <html>
     <head>
         <title>HHSClubs Authorization</title>

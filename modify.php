@@ -3,11 +3,12 @@ if(!isset($_SESSION['username'])){
    header("Location:login.php");
 } 
 ?>
+
 <?php 
-$servername = getenv("herokuServer");
-$username = getenv("herokuUser");
-$password = getenv("herokuPass");
-$dbName = getenv("herokuDB");
+$servername = "localhost";
+$username = "root";
+$password = "1998St@v";
+$dbName = "hhsclubdata";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbName);
@@ -15,20 +16,37 @@ $conn = new mysqli($servername, $username, $password, $dbName);
 // Check connection
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
-} 
+}
 
-$clubname = mysqli_real_escape_string($conn, $_POST['delclub']);
+session_start();
+if (isset($_SESSION['refresh'])) {
+    header("Location:index.php");
+    session_unset();
+    die;
+}
+$_SESSION['refresh'] = "done";
 
-$sql = "DELETE FROM HHSClubData WHERE clubName = ('$clubname')";
+$clubName = mysqli_real_escape_string($conn, $_POST["name"]);
+$shortDesc = mysqli_real_escape_string($conn, $_POST["shortDesc"]);
+$clubIcon = mysqli_real_escape_string($conn, $_POST["icon"]);
+$leftImage = mysqli_real_escape_string($conn, $_POST["left"]);
+$longDesc = mysqli_real_escape_string($conn, $_POST["longDesc"]);
+$room = mysqli_real_escape_string($conn, $_POST["room"]);
+$times = mysqli_real_escape_string($conn, $_POST["times"]);
+$advisor = mysqli_real_escape_string($conn, $_POST["advisor"]);
+$email = mysqli_real_escape_string($conn, $_POST["email"]);
 
-if($conn->query($sql)) {
-    echo "<h1 style = 'text-align: center; color: white;'> You've successfully deleted a club! </h1>";
+$remove = "DELETE FROM HHSClubData WHERE clubName = ('$clubName')";
+$readd = "INSERT INTO HHSClubData (clubName, shortDesc, clubIcon, leftImage, longDesc, room, times, advisor, email) VALUES ('$clubName', '$shortDesc', '$clubIcon', '$leftImage', '$longDesc', '$room', '$times', '$advisor', '$email')";
+
+if($conn->query($remove) && ($conn->query($readd))) {
+    echo "<h1 style = 'text-align: center; color: white;'> You've successfully Modified a club </h1>";
 }
 
 ?>
 <html>
     <head>
-        <title>Club deleted</title>
+        <title>Club modified.</title>
         <meta name="description" content="This is my website. It's not good :(">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href = "style.css">
