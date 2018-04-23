@@ -171,6 +171,5 @@ while($rowu = $emailresults->fetch_assoc()) {
 </body>
 </html>
 <?php
-session_unset();
 mysqli_close($conn);
 ?>
