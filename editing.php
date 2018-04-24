@@ -94,15 +94,15 @@ while($rowu = $emailresults->fetch_assoc()) {
     <h1 style = "text-align: center; color: white;"> Editing: <?php echo "$clubname" ?> </h1>
     <form style = "text-align: center;"action = "modify.php" method="post">
         <input value="<?php echo "$vid"; ?>" style = "width: 100%;" type = "hidden" required name="clubid"><br>
-        <input placeholder = "Club name." style = "width: 100%;" type = "text" required name="name"><br><br>
-        <textarea row="1" id="text" style = "width: 100%; resize: none; overflow: hidden; outline: none;" type = "text" required name="shortDesc"><?php echo "$vshort"; ?></textarea><br><br>
-        <div data-tip="Right click on an image, click 'Open image in new tab', and copy paste that link. If you want to upload your own image, do so on another site and follow these instructions (sites like imgur or imgbb)."><input pattern="(?:([^:/?#]+):)?(?://([^/?#]*))?([^?#]*\.(?:jpg|gif|png|jpeg))(?:\?([^#]*))?(?:#(.*))?" value = "<?php echo "$vicon"; ?>" style = "width: 100%;" type = "text" required name="icon"></div><br>
-        <div data-tip="Right click on an image, click 'Open image in new tab', and copy paste that link. If you want to upload your own image, do so on another site and follow these instructions (sites like imgur or imgbb)."><input pattern="(?:([^:/?#]+):)?(?://([^/?#]*))?([^?#]*\.(?:jpg|gif|png|jpeg))(?:\?([^#]*))?(?:#(.*))?" value = "<?php echo "$vimage"; ?>" style = "width: 100%;" type = "text" required name="left"></div><br>
-        <textarea row="1" id="texttwo" style = "width: 100%; resize: none; overflow: hidden; outline: none;" type = "text" required name="longDesc"><?php echo "$vlong"; ?></textarea><br><br>
-        <input value = "<?php echo "$vroom"; ?>" style = "width: 100%;" type = "text" required name="room"><br><br>
-        <input value = "<?php echo "$vtimes"; ?>" style = "width: 100%;" type = "text" required name="times"><br><br>
-        <input value = "<?php echo "$vadvisor"; ?>" style = "width: 100%;" type = "text" required name="advisor"><br><br>
-        <input value = "<?php echo "$vemail"; ?>" style = "width: 100%;" type = "email" required name="email"><br><br>
+        <input placeholder = "Club name." value="<?php echo "$vname"; ?>" style = "width: 100%;" type = "text" required name="name"><br><br>
+        <textarea placeholder = "A short hook to catch a student's attention." row="1" id="text" style = "width: 100%; resize: none; overflow: hidden; outline: none;" type = "text" required name="shortDesc"><?php echo "$vshort"; ?></textarea><br><br>
+        <div data-tip="Right click on an image, click 'Open image in new tab', and copy paste that link. If you want to upload your own image, do so on another site and follow these instructions (sites like imgur or imgbb)."><input pattern="(?:([^:/?#]+):)?(?://([^/?#]*))?([^?#]*\.(?:jpg|gif|png|jpeg))(?:\?([^#]*))?(?:#(.*))?" placeholder = "Main Clubs Page Image URL, must end with .png, .jpg, or .gif!" value = "<?php echo "$vicon"; ?>" style = "width: 100%;" type = "text" required name="icon"></div><br>
+        <div data-tip="Right click on an image, click 'Open image in new tab', and copy paste that link. If you want to upload your own image, do so on another site and follow these instructions (sites like imgur or imgbb)."><input pattern="(?:([^:/?#]+):)?(?://([^/?#]*))?([^?#]*\.(?:jpg|gif|png|jpeg))(?:\?([^#]*))?(?:#(.*))?" value = "<?php echo "$vimage"; ?>" placeholder = "Top image URL, must end with .png, .jpg, or .gif!" style = "width: 100%;" type = "text" required name="left"></div><br>
+        <textarea placeholder = "A long description to tell students about the club. Fill this out thoughroughly!" row="1" id="texttwo" style = "width: 100%; resize: none; overflow: hidden; outline: none;" type = "text" required name="longDesc"><?php echo "$vlong"; ?></textarea><br><br>
+        <input placeholder = "Location\Room #" value = "<?php echo "$vroom"; ?>" style = "width: 100%;" type = "text" required name="room"><br><br>
+        <input placeholder = "Days and Times: " value = "<?php echo "$vtimes"; ?>" style = "width: 100%;" type = "text" required name="times"><br><br>
+        <input placeholder = "Advisor's name." value = "<?php echo "$vadvisor"; ?>" style = "width: 100%;" type = "text" required name="advisor"><br><br>
+        <input placeholder = "Advisor's contact information." value = "<?php echo "$vemail"; ?>" style = "width: 100%;" type = "email" required name="email"><br><br>
         <input  class = "btn btn-md btn-submit-custom" type="submit">
     </form>
     </div>
