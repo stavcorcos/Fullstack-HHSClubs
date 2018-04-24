@@ -26,6 +26,7 @@ if (isset($_SESSION['refresh'])) {
 }
 $_SESSION['refresh'] = "done";
 
+$clubID = mysqli_real_escape_string($conn, $_POST["clubid"]);
 $clubName = mysqli_real_escape_string($conn, $_POST["name"]);
 $shortDesc = mysqli_real_escape_string($conn, $_POST["shortDesc"]);
 $clubIcon = mysqli_real_escape_string($conn, $_POST["icon"]);
@@ -36,7 +37,7 @@ $times = mysqli_real_escape_string($conn, $_POST["times"]);
 $advisor = mysqli_real_escape_string($conn, $_POST["advisor"]);
 $email = mysqli_real_escape_string($conn, $_POST["email"]);
 
-$remove = "DELETE FROM HHSClubData WHERE clubName = ('$clubName')";
+$remove = "DELETE FROM HHSClubData WHERE ID = ('$clubID')";
 $readd = "INSERT INTO HHSClubData (clubName, shortDesc, clubIcon, leftImage, longDesc, room, times, advisor, email) VALUES ('$clubName', '$shortDesc', '$clubIcon', '$leftImage', '$longDesc', '$room', '$times', '$advisor', '$email')";
 
 if($conn->query($remove) && ($conn->query($readd))) {

@@ -20,6 +20,8 @@ if ($conn->connect_error) {
 
 $clubname = mysqli_real_escape_string($conn, $_POST['editclub']);
 
+$idquery= "SELECT ID FROM HHSClubData WHERE clubName = ('$clubname')";
+$idresults = $conn->query($idquery);
 $namequery= "SELECT clubName FROM HHSClubData WHERE clubName = ('$clubname')";
 $nameresults = $conn->query($namequery);
 $shortquery= "SELECT shortDesc FROM HHSClubData WHERE clubName = ('$clubname')";
@@ -39,6 +41,9 @@ $advisorresults = $conn->query($advisorquery);
 $emailquery= "SELECT email FROM HHSClubData WHERE clubName = ('$clubname')";
 $emailresults = $conn->query($emailquery);
 
+while($rowjh = $idresults->fetch_assoc()) {
+    $vid = $rowjh["ID"];
+}
 while($row = $nameresults->fetch_assoc()) {
     $vname = $row["clubName"];
 }
@@ -88,7 +93,8 @@ while($rowu = $emailresults->fetch_assoc()) {
     <div class = "col-xl-8 col-lg-9 col-md-10 col-sm-12">
     <h1 style = "text-align: center; color: white;"> Editing: <?php echo "$clubname" ?> </h1>
     <form style = "text-align: center;"action = "modify.php" method="post">
-        <input value="<?php echo "$vname"; ?>" style = "width: 100%;" type = "hidden" required name="name"><br>
+        <input value="<?php echo "$vid"; ?>" style = "width: 100%;" type = "hidden" required name="clubid"><br>
+        <input placeholder = "Club name." style = "width: 100%;" type = "text" required name="name"><br><br>
         <textarea row="1" id="text" style = "width: 100%; resize: none; overflow: hidden; outline: none;" type = "text" required name="shortDesc"><?php echo "$vshort"; ?></textarea><br><br>
         <div data-tip="Right click on an image, click 'Open image in new tab', and copy paste that link. If you want to upload your own image, do so on another site and follow these instructions (sites like imgur or imgbb)."><input pattern="(?:([^:/?#]+):)?(?://([^/?#]*))?([^?#]*\.(?:jpg|gif|png|jpeg))(?:\?([^#]*))?(?:#(.*))?" value = "<?php echo "$vicon"; ?>" style = "width: 100%;" type = "text" required name="icon"></div><br>
         <div data-tip="Right click on an image, click 'Open image in new tab', and copy paste that link. If you want to upload your own image, do so on another site and follow these instructions (sites like imgur or imgbb)."><input pattern="(?:([^:/?#]+):)?(?://([^/?#]*))?([^?#]*\.(?:jpg|gif|png|jpeg))(?:\?([^#]*))?(?:#(.*))?" value = "<?php echo "$vimage"; ?>" style = "width: 100%;" type = "text" required name="left"></div><br>
