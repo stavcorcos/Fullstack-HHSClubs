@@ -40,14 +40,14 @@ $remove = "DELETE FROM HHSClubData WHERE clubName = ('$clubName')";
 $readd = "INSERT INTO HHSClubData (clubName, shortDesc, clubIcon, leftImage, longDesc, room, times, advisor, email) VALUES ('$clubName', '$shortDesc', '$clubIcon', '$leftImage', '$longDesc', '$room', '$times', '$advisor', '$email')";
 
 if($conn->query($remove) && ($conn->query($readd))) {
-    echo "<h1 style = 'text-align: center; color: white;'> You've successfully Modified a club </h1>";
+    echo "<h1 style = 'text-align: center; color: white;'> You've successfully modified $clubName </h1>";
 }
 
 ?>
 <html>
     <head>
         <title>Club modified.</title>
-        <meta name="description" content="This is my website. It's not good :(">
+        <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href = "style.css">
         <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
