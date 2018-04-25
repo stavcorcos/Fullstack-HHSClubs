@@ -359,7 +359,7 @@ firstPT = document.createTextNode("Created by ");
 firstP.appendChild(firstPT);
 
 stavA = document.createElement("a");
-stavA.setAttribute("href", "https://github.com/Poonchy");
+stavA.setAttribute("href", "https://poonchy.github.io");
 stavA.setAttribute("target", "_blank");
 stavAP = document.createTextNode("Stav Corcos.");
 stavA.appendChild(stavAP);
