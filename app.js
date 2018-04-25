@@ -379,7 +379,7 @@ thirdPT = document.createTextNode(" and ");
 firstP.appendChild(thirdPT);
 
 kathrynA = document.createElement("a");
-kathrynA.setAttribute("href", "https://livingsoloved.com");
+kathrynA.setAttribute("href", "https://poonchy.github.io/KathrynCorcos");
 kathrynA.setAttribute("target", "_blank");
 kathrynAP = document.createTextNode("Kathryn McCarn.");
 kathrynA.appendChild(kathrynAP);

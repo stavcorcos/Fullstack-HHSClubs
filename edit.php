@@ -45,7 +45,7 @@ $resultstwo = $conn->query($query);
 <div class = "container">
 <div class = "row justify-content-center">
 <div class = "col-xl-6 col-lg-6 col-md-7 col-sm-12">
-    <h1 style = "text-align: center; color: white;"> Add a club. </h1>
+    <h1 style = "text-align: center; color: white;"> Add a club </h1>
     <form style = "text-align: center;"action = "insert.php" method="post">
         <input placeholder = "Club name." style = "width: 100%;" type = "text" required name="name"><br><br>
         <textarea row="1" id="text" placeholder = "A short hook to catch a student's attention." style = "width: 100%; resize: none; overflow: hidden; outline: none;" type = "text" required name="shortDesc"></textarea><br><br>
@@ -60,7 +60,7 @@ $resultstwo = $conn->query($query);
     </form>
 </div>
 <div class = "col-xl-6 col-lg-6 col-md-5 col-sm-12">
-<h1 style = "text-align: center; color: white;"> Delete a club. </h1>
+<h1 style = "text-align: center; color: white;"> Delete a club </h1>
 <form action = "delete.php" method="post">
     <div class = "row">
     <?php 
@@ -78,7 +78,7 @@ $resultstwo = $conn->query($query);
 </form>
 </div>
 <div class = "col-xl-6 col-lg-6 col-md-5 col-sm-12">
-<h1 style = "text-align: center; color: white;"> Edit a club. </h1>
+<h1 style = "text-align: center; color: white;"> Edit a club </h1>
 <form action = "editing.php" method="post">
     <div class = "row">
     <?php 
@@ -102,7 +102,7 @@ $resultstwo = $conn->query($query);
     echo "<div class = 'container'>";
     echo "<div class = 'row justify-content-center'>";
     echo "<div class = 'col-xl-12 col-lg-12 col-md-12 col-sm-12'>";
-    echo "<h1 style = 'text-align: center; color: white;'> Reset non-admin password. </h1>" . "<br>";
+    echo "<h1 style = 'text-align: center; color: white;'> Reset non-admin password </h1>" . "<br>";
     echo "</div>";
     echo "<form onsubmit='checkCaptcha()' style = 'text-align: center;'action = 'password.php' method='post'>";
     echo "<div id = 'recaptcha' class='g-recaptcha' data-sitekey='6LfarFIUAAAAAOROsAVMC76_4iM0XWS97IcWUx6x'></div> <br>";
