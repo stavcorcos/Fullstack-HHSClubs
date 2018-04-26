@@ -525,3 +525,35 @@ body {
     background-size: contain;
     background-repeat: no-repeat;
 }
+
+.contactimgs {
+    height: 100%;
+    border-radius: 50%;
+}
+
+.contacts {
+    height: 100px;
+    margin: 0 5px !important;
+    color: rgba(255, 255, 255, 0);
+    -webkit-transition: 1.5s ease-in;
+    -moz-transition: 1.5s ease-in;
+    -ms-transition: 1.5s ease-in;
+    -o-transition: 1.5s ease-in;
+    transition: 1.5s ease-in;
+}
+
+.contacts span {
+    height: 100%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 50%;
+    padding: 0 !important;
+    margin: 0 !important;
+    -webkit-transition: all .5s ease;
+	-moz-transition: all .5s ease;
+	-o-transition: all .5s ease;
+	transition: all .5s ease;
+}
+
+.contacts span:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 04), 0 6px 20px 0 rgba(0, 0, 0, 0.39);
+}

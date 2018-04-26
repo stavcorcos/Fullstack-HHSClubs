@@ -361,6 +361,30 @@ firstP.setAttribute("id", "creditdesc")
 firstPT = document.createTextNode("Created by Stav Corcos with the collaborative help of Andrew VanNess and Kathryn Corcos");
 firstP.appendChild(firstPT);
 
+stavA = document.createElement("a");
+stavA.setAttribute("href", "https://poonchy.github.io");
+stavA.setAttribute("target", "_blank");
+stavAP = document.createTextNode("Stav Corcos.");
+stavA.appendChild(stavAP);
+firstP.appendChild(stavA);
+
+secondPT = document.createTextNode(" Made possible with the collaborative help of Andrew VanNess and Kathryn Corcos");
+
 projectHoverContent.appendChild(firstP);
 clubHoverHR = document.createElement("hr");
 projectHoverContent.appendChild(clubHoverHR);
+
+iconRow = document.createElement("div");
+iconRow.setAttribute("class", "row justify-content-center");
+
+poonchCont = document.createElement("div");
+poonchCont.setAttribute("class", "contacts row justify-content-center align-items-center")
+poonchSpan = document.createElement("span");
+poonchIcon = document.createElement("img");
+poonchIcon.setAttribute("class", "contactimgs");
+poonchIcon.setAttribute("src", "images/Poonchy Script Logo White.png");
+poonchSpan.appendChild(poonchIcon);
+poonchCont.appendChild(poonchSpan);
+iconRow.appendChild(poonchCont);
+
+projectHoverContent.appendChild(iconRow);
