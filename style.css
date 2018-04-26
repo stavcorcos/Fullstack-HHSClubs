@@ -537,7 +537,7 @@ body {
 }
 
 .contacts {
-    height: 100px;
+    height: 80px;
     margin: 0 5px !important;
     color: rgba(255, 255, 255, 0);
     -webkit-transition: 1.5s ease-in;
