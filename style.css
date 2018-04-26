@@ -51,11 +51,6 @@
     cursor: pointer;
 }
 
-::-webkit-scrollbar {
-    width: 0px;
-    background: transparent;
-}
-
 #superContainer {
     overflow-y: auto;
 }

@@ -10,6 +10,7 @@ $username = getenv("herokuUser");
 $password = getenv("herokuPass");
 $dbName = getenv("herokuDB");
 
+
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbName);
 
