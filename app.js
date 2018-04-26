@@ -368,28 +368,9 @@ stavAP = document.createTextNode("Stav Corcos.");
 stavA.appendChild(stavAP);
 firstP.appendChild(stavA);
 
-secondPT = document.createTextNode(" Made possible with the collaborative help of ");
+secondPT = document.createTextNode(" Made possible with the collaborative help of Andrew VanNess and Kathryn Corcos");
 firstP.appendChild(secondPT);
-
-lunithA = document.createElement("a");
-lunithA.setAttribute("href", "https://github.com/oftheheadland");
-lunithA.setAttribute("target", "_blank");
-lunithAP = document.createTextNode("Andrew VanNess");
-lunithA.appendChild(lunithAP);
-firstP.appendChild(lunithA);
-
-thirdPT = document.createTextNode(" and ");
-firstP.appendChild(thirdPT);
-
-kathrynA = document.createElement("a");
-kathrynA.setAttribute("href", "https://poonchy.github.io/KathrynCorcos");
-kathrynA.setAttribute("target", "_blank");
-kathrynAP = document.createTextNode("Kathryn McCarn.");
-kathrynA.appendChild(kathrynAP);
-firstP.appendChild(kathrynA);
-
 
 projectHoverContent.appendChild(firstP);
 clubHoverHR = document.createElement("hr");
 projectHoverContent.appendChild(clubHoverHR);
-
