@@ -378,4 +378,24 @@ poonchSpan.appendChild(poonchIcon);
 poonchCont.appendChild(poonchSpan);
 iconRow.appendChild(poonchCont);
 
+lunithCont = document.createElement("div");
+lunithCont.setAttribute("class", "contacts row justify-content-center align-items-center")
+lunithSpan = document.createElement("span");
+lunithIcon = document.createElement("img");
+lunithIcon.setAttribute("class", "contactimgs");
+lunithIcon.setAttribute("src", "Images/Lunith Logo.png");
+lunithSpan.appendChild(lunithIcon);
+lunithCont.appendChild(lunithSpan);
+iconRow.appendChild(lunithCont);
+
+kathrynCont = document.createElement("div");
+kathrynCont.setAttribute("class", "contacts row justify-content-center align-items-center")
+kathrynSpan = document.createElement("span");
+kathrynIcon = document.createElement("img");
+kathrynIcon.setAttribute("class", "contactimgs");
+kathrynIcon.setAttribute("src", "Images/LSL Profile Purple Circle.png");
+kathrynSpan.appendChild(kathrynIcon);
+kathrynCont.appendChild(kathrynSpan);
+iconRow.appendChild(kathrynCont);
+
 projectHoverContent.appendChild(iconRow);
