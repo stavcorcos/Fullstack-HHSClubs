@@ -358,18 +358,8 @@ projectAnimated.appendChild(projectHoverContent);
 //Creating the credits hover
 firstP = document.createElement("p");
 firstP.setAttribute("id", "creditdesc")
-firstPT = document.createTextNode("Created by ");
+firstPT = document.createTextNode("Created by Stav Corcos with the collaborative help of Andrew VanNess and Kathryn Corcos");
 firstP.appendChild(firstPT);
-
-stavA = document.createElement("a");
-stavA.setAttribute("href", "https://poonchy.github.io");
-stavA.setAttribute("target", "_blank");
-stavAP = document.createTextNode("Stav Corcos.");
-stavA.appendChild(stavAP);
-firstP.appendChild(stavA);
-
-secondPT = document.createTextNode(" Made possible with the collaborative help of Andrew VanNess and Kathryn Corcos");
-firstP.appendChild(secondPT);
 
 projectHoverContent.appendChild(firstP);
 clubHoverHR = document.createElement("hr");
