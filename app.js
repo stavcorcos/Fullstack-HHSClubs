@@ -322,6 +322,7 @@ for (i in clubNamesArray) {
         window.onclick = function(event) {
           if (event.target == modalItself) {
             modalItself.style.display = "none";
+            document.getElementById("body").style.overflow = "auto";
           }
         }
       }
