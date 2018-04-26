@@ -293,6 +293,7 @@ for (i in clubNamesArray) {
       buttons[i].onclick = function() {
         var modalItself = document.getElementById(this.id + "-modal");
         modalItself.style.display = "block";
+        document.getElementById("myDIV").style.overflow = "hidden";
       }
     }
 
@@ -308,6 +309,7 @@ for (i in clubNamesArray) {
         modalItself.style.display = "none";
         originalClub = this.id.substring(6,9999);
         modalBackground.setAttribute("id", originalClub + "-button-modal");
+        document.getElementById("myDIV").style.overflow = "auto";
       }
     }
 
