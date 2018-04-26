@@ -531,6 +531,10 @@ body {
     border-radius: 50%;
 }
 
+.rowtofit {
+    width: 100%;
+}
+
 .contacts {
     height: 100px;
     margin: 0 5px !important;
@@ -544,7 +548,7 @@ body {
 
 .contacts span {
     height: 100%;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.2), 0 6px 20px 0 rgba(255, 255, 255, 0.19);
     border-radius: 50%;
     padding: 0 !important;
     margin: 0 !important;
@@ -555,5 +559,5 @@ body {
 }
 
 .contacts span:hover {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 04), 0 6px 20px 0 rgba(0, 0, 0, 0.39);
+    box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.4), 0 6px 20px 0 rgba(255, 255, 255, 0.39);
 }
