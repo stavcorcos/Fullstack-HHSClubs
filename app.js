@@ -105,6 +105,36 @@ for (let i = 0; i < clubNamesArray.length; i++) {
   for (s; s < noSpaceClub.length; s++) {
       noSpaceClub = noSpaceClub.replace(" ", "");
       noSpaceClub = noSpaceClub.replace("'", "");
+      noSpaceClub = noSpaceClub.replace(".", "");
+      noSpaceClub = noSpaceClub.replace("@", "");
+      noSpaceClub = noSpaceClub.replace("!", "");
+      noSpaceClub = noSpaceClub.replace("#", "");
+      noSpaceClub = noSpaceClub.replace("$", "");
+      noSpaceClub = noSpaceClub.replace("%", "");
+      noSpaceClub = noSpaceClub.replace("^", "");
+      noSpaceClub = noSpaceClub.replace("&", "");
+      noSpaceClub = noSpaceClub.replace("*", "");
+      noSpaceClub = noSpaceClub.replace("(", "");
+      noSpaceClub = noSpaceClub.replace(")", "");
+      noSpaceClub = noSpaceClub.replace("-", "");
+      noSpaceClub = noSpaceClub.replace("_", "");
+      noSpaceClub = noSpaceClub.replace("+", "");
+      noSpaceClub = noSpaceClub.replace("=", "");
+      noSpaceClub = noSpaceClub.replace("`", "");
+      noSpaceClub = noSpaceClub.replace("~", "");
+      noSpaceClub = noSpaceClub.replace("<", "");
+      noSpaceClub = noSpaceClub.replace(">", "");
+      noSpaceClub = noSpaceClub.replace("/", "");
+      noSpaceClub = noSpaceClub.replace("?", "");
+      noSpaceClub = noSpaceClub.replace(";", "");
+      noSpaceClub = noSpaceClub.replace(":", "");
+      noSpaceClub = noSpaceClub.replace("[", "");
+      noSpaceClub = noSpaceClub.replace("]", "");
+      noSpaceClub = noSpaceClub.replace("{", "");
+      noSpaceClub = noSpaceClub.replace("}", "");
+      noSpaceClub = noSpaceClub.replace("|", "");
+      noSpaceClub = noSpaceClub.replace("\\", "");
+      noSpaceClub = noSpaceClub.replace("\"", "");
   }
   noSpaceClub = noSpaceClub.toLowerCase();
   window[noSpaceClub] = {
