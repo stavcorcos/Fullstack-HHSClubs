@@ -132,8 +132,7 @@ for (i in clubNamesArray) {
     noSpaceClub = clubNamesArray[i];
     let s = 0
     for (s; s < noSpaceClub.length; s++) {
-        noSpaceClub = noSpaceClub.replace(" ", "");
-        noSpaceClub = noSpaceClub.replace("'", "");
+      noSpaceClub = noSpaceClub.replace(" ", "").replace("'", "").replace(".", "").replace(",", "").replace("@", "").replace("!", "").replace("#", "").replace("$", "").replace("%", "").replace("^", "").replace("&", "").replace("*", "").replace("(", "").replace(")", "").replace("-", "").replace("_", "").replace("+", "").replace("=", "").replace("`", "").replace("~", "").replace("<", "").replace(">", "").replace("/", "").replace("?", "").replace(";", "").replace(":", "").replace("[", "").replace("]", "").replace("{", "").replace("}", "").replace("|", "").replace("\\", "").replace("\"", "");
     }
     noSpaceClub = noSpaceClub.toLowerCase();
 
