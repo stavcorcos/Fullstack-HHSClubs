@@ -66,7 +66,7 @@ $resultstwo = $conn->query($query);
     <?php 
         while($rows = $results->fetch_assoc()) {
             echo "<div class = 'col-xl-6 col-lg-6 col-md-12 col-sm-12'>";
-            echo "<input style = 'color: white;' required type = 'radio' name='delclub' value='" . htmlspecialchars($rows["clubName"]) . "'>" . "<span style = 'color: white; font-size: 20px;'>" . htmlspecialchars($rows["clubName"]) . "</span>" . "<br>";
+            echo "<input style = 'color: white;' required type = 'radio' name='delclub' value='" . htmlentities($rows["clubName"]) . "'>" . "<span style = 'color: white; font-size: 20px;'>" . htmlspecialchars($rows["clubName"]) . "</span>" . "<br>";
             echo "</div>";
         }
     ?>
@@ -84,7 +84,7 @@ $resultstwo = $conn->query($query);
     <?php 
         while($rowu = $resultstwo->fetch_assoc()) {
             echo "<div class = 'col-xl-6 col-lg-6 col-md-12 col-sm-12'>";
-            echo "<input style = 'color: white;' required type = 'radio' name='editclub' value='" . htmlspecialchars($rowu["clubName"]) . "'>" . "<span style = 'color: white; font-size: 20px;'>" . htmlspecialchars($rowu["clubName"]) . "</span>" . "<br>";
+            echo "<input style = 'color: white;' required type = 'radio' name='editclub' value='" . htmlentities($rowu["clubName"]) . "'>" . "<span style = 'color: white; font-size: 20px;'>" . htmlspecialchars($rowu["clubName"]) . "</span>" . "<br>";
             echo "</div>";
         }
     ?>
