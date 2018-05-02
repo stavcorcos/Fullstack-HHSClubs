@@ -20,7 +20,6 @@ if ($conn->connect_error) {
 
 $clubname = mysqli_real_escape_string($conn, $_POST['delclub']);
 $fclubname = htmlspecialchars_decode($clubname);
-echo $fclubname;
 
 $sql = "DELETE FROM HHSClubData WHERE clubName = ('$fclubname')";
 
