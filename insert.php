@@ -39,7 +39,7 @@ $email = mysqli_real_escape_string($conn, $_POST["email"]);
 $sql = "INSERT INTO HHSClubData (clubName, shortDesc, clubIcon, leftImage, longDesc, room, times, advisor, email) VALUES ('$clubName', '$shortDesc', '$clubIcon', '$leftImage', '$longDesc', '$room', '$times', '$advisor', '$email')";
 
 if($conn->query($sql)) {
-    echo "<h1 style = 'text-align: center; color: white;'> You've successfully added a club! </h1>";
+    echo "<h1 style = 'text-align: center; color: white;'> You've successfully added" . $clubName . "</h1>";
 }
 
 ?>

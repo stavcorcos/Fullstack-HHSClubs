@@ -19,12 +19,11 @@ if ($conn->connect_error) {
 
 
 $clubname = mysqli_real_escape_string($conn, $_POST['delclub']);
-$fclubname = htmlspecialchars_decode($clubname);
 
-$sql = "DELETE FROM HHSClubData WHERE clubName = ('$fclubname')";
+$sql = "DELETE FROM HHSClubData WHERE clubName = ('$clubname')";
 
 if($conn->query($sql)) {
-    echo "<h1 style = 'text-align: center; color: white;'> You've successfully deleted a club! </h1>";
+    echo "<h1 style = 'text-align: center; color: white;'> You've successfully deleted" . $clubname . "! </h1>";
 }
 
 ?>
