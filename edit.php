@@ -66,7 +66,7 @@ $resultstwo = $conn->query($query);
     <?php 
         while($rows = $results->fetch_assoc()) {
             echo "<div class = 'col-xl-6 col-lg-6 col-md-12 col-sm-12'>";
-            echo "<input style = 'color: white;' required type = 'radio' name='delclub' value='" . mysql_real_escape_string($rows["clubName"]) . "'>" . "<span style = 'color: white; font-size: 20px;'>" . mysql_real_escape_string($rows["clubName"]) . "</span>" . "<br>";
+            echo "<input style = 'color: white;' required type = 'radio' name='delclub' value='" . $rows["clubName"] . "'>" . "<span style = 'color: white; font-size: 20px;'>" . $rows["clubName"] . "</span>" . "<br>";
             echo "</div>";
         }
     ?>
@@ -84,7 +84,7 @@ $resultstwo = $conn->query($query);
     <?php 
         while($rowu = $resultstwo->fetch_assoc()) {
             echo "<div class = 'col-xl-6 col-lg-6 col-md-12 col-sm-12'>";
-            echo "<input style = 'color: white;' required type = 'radio' name='editclub' value='" . mysql_real_escape_string($rowu["clubName"]) . "'>" . "<span style = 'color: white; font-size: 20px;'>" . mysql_real_escape_string($rowu["clubName"]) . "</span>" . "<br>";
+            echo "<input style = 'color: white;' required type = 'radio' name='editclub' value='" . $rowu["clubName"] . "'>" . "<span style = 'color: white; font-size: 20px;'>" . $rowu["clubName"] . "</span>" . "<br>";
             echo "</div>";
         }
     ?>
