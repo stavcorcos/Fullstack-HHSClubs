@@ -17,9 +17,12 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 } 
 
-$clubname = mysqli_real_escape_string($conn, htmlspecialchars_decode($_POST['delclub']));
 
-$sql = "DELETE FROM HHSClubData WHERE clubName = ('$clubname')";
+$clubname = mysqli_real_escape_string($conn, $_POST['delclub']);
+$fclubname = htmlspecialchars_decode($clubname);
+echo $fclubname;
+
+$sql = "DELETE FROM HHSClubData WHERE clubName = ('$fclubname')";
 
 if($conn->query($sql)) {
     echo "<h1 style = 'text-align: center; color: white;'> You've successfully deleted a club! </h1>";
