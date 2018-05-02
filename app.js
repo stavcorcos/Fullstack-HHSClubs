@@ -103,38 +103,7 @@ for (let i = 0; i < clubNamesArray.length; i++) {
   clubNamesArray[i] = toTitleCase(clubNamesArray[i]);
   let s = 0;
   for (s; s < noSpaceClub.length; s++) {
-      noSpaceClub = noSpaceClub.replace(" ", "");
-      noSpaceClub = noSpaceClub.replace("'", "");
-      noSpaceClub = noSpaceClub.replace(".", "");
-      noSpaceClub = noSpaceClub.replace("@", "");
-      noSpaceClub = noSpaceClub.replace("!", "");
-      noSpaceClub = noSpaceClub.replace("#", "");
-      noSpaceClub = noSpaceClub.replace("$", "");
-      noSpaceClub = noSpaceClub.replace("%", "");
-      noSpaceClub = noSpaceClub.replace("^", "");
-      noSpaceClub = noSpaceClub.replace("&", "");
-      noSpaceClub = noSpaceClub.replace("*", "");
-      noSpaceClub = noSpaceClub.replace("(", "");
-      noSpaceClub = noSpaceClub.replace(")", "");
-      noSpaceClub = noSpaceClub.replace("-", "");
-      noSpaceClub = noSpaceClub.replace("_", "");
-      noSpaceClub = noSpaceClub.replace("+", "");
-      noSpaceClub = noSpaceClub.replace("=", "");
-      noSpaceClub = noSpaceClub.replace("`", "");
-      noSpaceClub = noSpaceClub.replace("~", "");
-      noSpaceClub = noSpaceClub.replace("<", "");
-      noSpaceClub = noSpaceClub.replace(">", "");
-      noSpaceClub = noSpaceClub.replace("/", "");
-      noSpaceClub = noSpaceClub.replace("?", "");
-      noSpaceClub = noSpaceClub.replace(";", "");
-      noSpaceClub = noSpaceClub.replace(":", "");
-      noSpaceClub = noSpaceClub.replace("[", "");
-      noSpaceClub = noSpaceClub.replace("]", "");
-      noSpaceClub = noSpaceClub.replace("{", "");
-      noSpaceClub = noSpaceClub.replace("}", "");
-      noSpaceClub = noSpaceClub.replace("|", "");
-      noSpaceClub = noSpaceClub.replace("\\", "");
-      noSpaceClub = noSpaceClub.replace("\"", "");
+      noSpaceClub = noSpaceClub.replace(" ", "").replace("'", "").replace(".", "").replace(",", "").replace("@", "").replace("!", "").replace("#", "").replace("$", "").replace("%", "").replace("^", "").replace("&", "").replace("*", "").replace("(", "").replace(")", "").replace("-", "").replace("_", "").replace("+", "").replace("=", "").replace("`", "").replace("~", "").replace("<", "").replace(">", "").replace("/", "").replace("?", "").replace(";", "").replace(":", "").replace("[", "").replace("]", "").replace("{", "").replace("}", "").replace("|", "").replace("\\", "").replace("\"", "");
   }
   noSpaceClub = noSpaceClub.toLowerCase();
   window[noSpaceClub] = {
