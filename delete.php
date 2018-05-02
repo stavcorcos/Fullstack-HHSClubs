@@ -23,7 +23,7 @@ $clubname = mysqli_real_escape_string($conn, $_POST['delclub']);
 $sql = "DELETE FROM HHSClubData WHERE clubName = ('$clubname')";
 
 if($conn->query($sql)) {
-    echo "<h1 style = 'text-align: center; color: white;'> You've successfully deleted" . $clubname . "! </h1>";
+    echo "<h1 style = 'text-align: center; color: white;'> You've successfully deleted " . $clubname . "! </h1>";
 }
 
 ?>
