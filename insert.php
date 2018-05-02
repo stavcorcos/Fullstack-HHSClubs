@@ -26,7 +26,7 @@ if (isset($_SESSION['refresh'])) {
 }
 $_SESSION['refresh'] = "done";
 
-$clubName = mysqli_real_escape_string($conn, $_POST["name"]);
+$clubName = htmlspecialchars_decode(mysqli_real_escape_string($conn, $_POST["name"]));
 $shortDesc = mysqli_real_escape_string($conn, $_POST["shortDesc"]);
 $clubIcon = mysqli_real_escape_string($conn, $_POST["icon"]);
 $leftImage = mysqli_real_escape_string($conn, $_POST["left"]);

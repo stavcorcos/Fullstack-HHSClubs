@@ -17,7 +17,7 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 } 
 
-$clubname = mysqli_real_escape_string($conn, $_POST['delclub']);
+$clubname = htmlspecialchars_decode(mysqli_real_escape_string($conn, $_POST['delclub']));
 
 $sql = "DELETE FROM HHSClubData WHERE clubName = ('$clubname')";
 
