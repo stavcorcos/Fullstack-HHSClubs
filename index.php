@@ -14,65 +14,30 @@ $dbName = getenv("herokuDB");
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbName);
 
-$namequery= "SELECT clubName FROM HHSClubData order by clubName REGEXP '^\d*[^\da-z&\.\' \-\"\!\@\#\$\%\^\*\(\)\;\:\<\>\,\?\/\~\`\|\_\-]' DESC, 
+$clubInfoQuery = "SELECT * FROM HHSClubData order by clubName REGEXP '^\d*[^\da-z&\.\' \-\"\!\@\#\$\%\^\*\(\)\;\:\<\>\,\?\/\~\`\|\_\-]' DESC, 
 clubName+0, clubName;";
-$nameresults = $conn->query($namequery);
-$shortquery= "SELECT shortDesc FROM HHSClubData";
-$shortresults = $conn->query($shortquery);
-$iconquery= "SELECT clubIcon FROM HHSClubData";
-$iconresults = $conn->query($iconquery);
-$leftquery= "SELECT leftImage FROM HHSClubData";
-$leftresults = $conn->query($leftquery);
-$longquery= "SELECT longDesc FROM HHSClubData";
-$longresults = $conn->query($longquery);
-$roomquery= "SELECT room FROM HHSClubData";
-$roomresults = $conn->query($roomquery);
-$timesquery= "SELECT times FROM HHSClubData";
-$timesresults = $conn->query($timesquery);
-$advisorquery= "SELECT advisor FROM HHSClubData";
-$advisorresults = $conn->query($advisorquery);
-$emailquery= "SELECT email FROM HHSClubData";
-$emailresults = $conn->query($emailquery);
-
-//while($row = $results->fetch_assoc()) {
-    //echo "id :" . $row["id"] . "<br>" . "Name : " . $row["clubName"] . "<br>" . "<br>";
-//}
+$clubInfoResults = $conn->query($clubInfoQuery);
 
 $nameObject = array();
-while($row = $nameresults->fetch_assoc()) {
-    $nameObject[] = $row;
-}
 $shortObject = array();
-while($rowd = $shortresults->fetch_assoc()) {
-    $shortObject[] = $rowd;
-}
 $iconObject = array();
-while($rowp = $iconresults->fetch_assoc()) {
-    $iconObject[] = $rowp;
-}
 $leftObject = array();
-while($rowa = $leftresults->fetch_assoc()) {
-    $leftObject[] = $rowa;
-}
 $longObject = array();
-while($rowc = $longresults->fetch_assoc()) {
-    $longObject[] = $rowc;
-}
 $roomObject = array();
-while($rowe = $roomresults->fetch_assoc()) {
-    $roomObject[] = $rowe;
-}
 $timesObject = array();
-while($rowh = $timesresults->fetch_assoc()) {
-    $timesObject[] = $rowh;
-}
 $advisorObject = array();
-while($rowl = $advisorresults->fetch_assoc()) {
-    $advisorObject[] = $rowl;
-}
 $emailObject = array();
-while($rowu = $emailresults->fetch_assoc()) {
-    $emailObject[] = $rowu;
+
+while($row = $clubInfoResults->fetch_assoc()) {
+    $nameObject[] = $row['clubName'];
+    $shortObject[] = $row['shortDesc'];
+    $iconObject[] = $row['clubIcon'];
+    $leftObject[] = $row['longDesc'];
+    $longObject[] = $row['leftImage'];
+    $roomObject[] = $row['room'];
+    $timesObject[] = $row['times'];
+    $advisorObject[] = $row['advisor'];
+    $emailObject[] = $row['email'];
 }
 
 ?>
