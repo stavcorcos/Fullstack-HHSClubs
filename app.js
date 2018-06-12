@@ -73,8 +73,7 @@ function objectToArray (initObject, finalArray){
         finalArray.push(array[0])
     }
 }
-clubNamesArray = [];
-objectToArray(clubNamesObject, clubNamesArray);
+clubNamesArray = clubNamesObject;
 clubShortDescArray = [];
 objectToArray(shortDescObject, clubShortDescArray);
 clubIconsArray = [];
