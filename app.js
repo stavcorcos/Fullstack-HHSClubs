@@ -127,7 +127,7 @@ for (i in clubNamesArray) {
     noSpaceClub = clubNamesArray[i];
     let s = 0
     for (s; s < noSpaceClub.length; s++) {
-      noSpaceClub = noSpaceClub.replace(" ", "").replace("'", "").replace(".", "").replace(",", "").replace("@", "").replace("!", "").replace("#", "").replace("$", "").replace("%", "").replace("^", "").replace("&", "").replace("*", "").replace("(", "").replace(")", "").replace("-", "").replace("_", "").replace("+", "").replace("=", "").replace("`", "").replace("~", "").replace("<", "").replace(">", "").replace("/", "").replace("?", "").replace(";", "").replace(":", "").replace("[", "").replace("]", "").replace("{", "").replace("}", "").replace("|", "").replace("\\", "").replace("\"", "").replace("1", "").replace("2", "").replace("3", "").replace("4", "").replace("5", "").replace("6", "").replace("7", "").replace("8", "").replace("9", "").replace("0", "");
+      noSpaceClub = noSpaceClub.replace(" ", "").replace("'", "").replace(".", "").replace(",", "").replace("@", "").replace("!", "").replace("#", "").replace("$", "").replace("%", "").replace("^", "").replace("&", "").replace("*", "").replace("(", "").replace(")", "").replace("-", "").replace("_", "").replace("+", "").replace("=", "").replace("`", "").replace("~", "").replace("<", "").replace(">", "").replace("/", "").replace("?", "").replace(";", "").replace(":", "").replace("[", "").replace("]", "").replace("{", "").replace("}", "").replace("|", "").replace("\\", "").replace("\"", "").replace("1", "one").replace("2", "two").replace("3", "three").replace("4", "four").replace("5", "five").replace("6", "six").replace("7", "seven").replace("8", "eight").replace("9", "nine").replace("0", "zero");
     }
     noSpaceClub = noSpaceClub.toLowerCase();
 
