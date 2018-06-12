@@ -66,30 +66,16 @@ function createCSSSelector (selector, style) {
       styleSheet.insertRule(selector + "{" + style + "}", styleSheetLength);
     }
   }
-
-function objectToArray (initObject, finalArray){
-    for(i in initObject) {
-        array = Object.values(initObject[i]);
-        finalArray.push(array[0])
-    }
-}
+  
 clubNamesArray = clubNamesObject;
-clubShortDescArray = [];
-objectToArray(shortDescObject, clubShortDescArray);
-clubIconsArray = [];
-objectToArray(clubIconsObject, clubIconsArray);
-clubLeftImageArray = [];
-objectToArray(leftImageObject, clubLeftImageArray);
-clubLongDescArray = [];
-objectToArray(longDescObject, clubLongDescArray);
-clubRoomArray = [];
-objectToArray(roomObject, clubRoomArray);
-clubTimesArray = [];
-objectToArray(timesObject, clubTimesArray);
-clubAdvisorArray = [];
-objectToArray(advisorObject, clubAdvisorArray);
-clubEmailArray = [];
-objectToArray(emailObject, clubEmailArray);
+clubShortDescArray = shortDescObject;
+clubIconsArray = clubIconsObject;
+clubLeftImageArray = leftImageObject;
+clubLongDescArray = longDescObject;
+clubRoomArray = roomObject;
+clubTimesArray = timesObject;
+clubAdvisorArray = advisorObject;
+clubEmailArray = emailObject;
 
 
 for (let i = 0; i < clubNamesArray.length; i++) {
