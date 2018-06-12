@@ -92,6 +92,7 @@ objectToArray(advisorObject, clubAdvisorArray);
 clubEmailArray = [];
 objectToArray(emailObject, clubEmailArray);
 
+clubNamesArray.sort();
 
 for (let i = 0; i < clubNamesArray.length; i++) {
   let noSpaceClub
@@ -115,8 +116,6 @@ for (let i = 0; i < clubNamesArray.length; i++) {
   };
 }
 
-clubNamesArray.sort();
-
 var newClub ;
 var imageCounter = 0;
 
@@ -129,6 +128,7 @@ for (i in clubNamesArray) {
     for (s; s < noSpaceClub.length; s++) {
       noSpaceClub = noSpaceClub.replace(" ", "").replace("'", "").replace(".", "").replace(",", "").replace("@", "").replace("!", "").replace("#", "").replace("$", "").replace("%", "").replace("^", "").replace("&", "").replace("*", "").replace("(", "").replace(")", "").replace("-", "").replace("_", "").replace("+", "").replace("=", "").replace("`", "").replace("~", "").replace("<", "").replace(">", "").replace("/", "").replace("?", "").replace(";", "").replace(":", "").replace("[", "").replace("]", "").replace("{", "").replace("}", "").replace("|", "").replace("\\", "").replace("\"", "").replace("1", "one").replace("2", "two").replace("3", "three").replace("4", "four").replace("5", "five").replace("6", "six").replace("7", "seven").replace("8", "eight").replace("9", "nine").replace("0", "zero");
     }
+
     noSpaceClub = noSpaceClub.toLowerCase();
 
     CSSObjectName = noSpaceClub;
