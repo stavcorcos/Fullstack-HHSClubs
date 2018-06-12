@@ -32,8 +32,8 @@ while($row = $clubInfoResults->fetch_assoc()) {
     $nameObject[] = $row['clubName'];
     $shortObject[] = $row['shortDesc'];
     $iconObject[] = $row['clubIcon'];
-    $leftObject[] = $row['longDesc'];
-    $longObject[] = $row['leftImage'];
+    $leftObject[] = $row['leftImage'];
+    $longObject[] = $row['longDesc'];
     $roomObject[] = $row['room'];
     $timesObject[] = $row['times'];
     $advisorObject[] = $row['advisor'];
@@ -84,7 +84,6 @@ var roomObject = <?php echo json_encode($roomObject) ?>;
 var timesObject = <?php echo json_encode($timesObject) ?>;
 var advisorObject = <?php echo json_encode($advisorObject) ?>;
 var emailObject = <?php echo json_encode($emailObject) ?>;
-<?php echo "$clubNamesObject"; ?>
 </script>
 <div class="container-fluid">
     <div class="row align-items-end justify-content-around" id = "clubContainer">

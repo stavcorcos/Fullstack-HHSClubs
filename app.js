@@ -66,7 +66,7 @@ function createCSSSelector (selector, style) {
       styleSheet.insertRule(selector + "{" + style + "}", styleSheetLength);
     }
   }
-  
+
 clubNamesArray = clubNamesObject;
 clubShortDescArray = shortDescObject;
 clubIconsArray = clubIconsObject;
@@ -79,7 +79,6 @@ clubEmailArray = emailObject;
 
 
 for (let i = 0; i < clubNamesArray.length; i++) {
-  console.log(clubNamesArray[i]);
   let noSpaceClub
   noSpaceClub = clubNamesArray[i];
   let s = 0;
