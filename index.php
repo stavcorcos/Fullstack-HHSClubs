@@ -75,7 +75,7 @@ while($row = $clubInfoResults->fetch_assoc()) {
     <img style = "width: 100%; height: auto; margin: 0; padding: 0;" src="Images\ClubsHeaderMobile.png" id = "mobileheader">
 </div>
 <script type="text/javascript">
-var clubNamesObject = <?php echo json_encode($nameObject) ?>;
+var clubNamesObject = <?php echo json_encode($nameObject, JSON_FORCE_OBJECT) ?>;
 var shortDescObject = <?php echo json_encode($shortObject) ?>;
 var clubIconsObject = <?php echo json_encode($iconObject) ?>;
 var leftImageObject = <?php echo json_encode($leftObject) ?>;
