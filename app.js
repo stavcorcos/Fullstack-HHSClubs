@@ -94,7 +94,7 @@ objectToArray(emailObject, clubEmailArray);
 
 
 for (let i = 0; i < clubNamesArray.length; i++) {
-  Console.log(clubNamesArray[i]);
+  console.log(clubNamesArray[i]);
   let noSpaceClub
   noSpaceClub = clubNamesArray[i];
   let s = 0;
