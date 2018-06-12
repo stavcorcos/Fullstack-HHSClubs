@@ -38,6 +38,7 @@ while($row = $clubInfoResults->fetch_assoc()) {
     $timesObject[] = $row['times'];
     $advisorObject[] = $row['advisor'];
     $emailObject[] = $row['email'];
+    echo $row['clubName'];
 }
 
 ?>
