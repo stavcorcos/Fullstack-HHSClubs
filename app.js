@@ -101,6 +101,16 @@ for (let i = 0; i < clubNamesArray.length; i++) {
   for (s; s < noSpaceClub.length; s++) {
     noSpaceClub = noSpaceClub.replace(" ", "").replace("'", "").replace(".", "").replace(",", "").replace("@", "").replace("!", "").replace("#", "").replace("$", "").replace("%", "").replace("^", "").replace("&", "").replace("*", "").replace("(", "").replace(")", "").replace("-", "").replace("_", "").replace("+", "").replace("=", "").replace("`", "").replace("~", "").replace("<", "").replace(">", "").replace("/", "").replace("?", "").replace(";", "").replace(":", "").replace("[", "").replace("]", "").replace("{", "").replace("}", "").replace("|", "").replace("\\", "").replace("\"", "").replace("1", "one").replace("2", "two").replace("3", "three").replace("4", "four").replace("5", "five").replace("6", "six").replace("7", "seven").replace("8", "eight").replace("9", "nine").replace("0", "zero");
   }
+  if(noSpaceClub.indexOf("onezero")) {
+    noSpaceClub.replace("onezero", "ten")
+  }
+  if(noSpaceClub.indexOf("oneone")) {
+    noSpaceClub.replace("oneone", "eleven")
+  }
+  if(noSpaceClub.indexOf("onetwo")) {
+    noSpaceClub.replace("onetwo", "twelve")
+  }
+
   noSpaceClub = noSpaceClub.toLowerCase();
   window[noSpaceClub] = {
     nospace: noSpaceClub,
@@ -127,6 +137,15 @@ for (i in clubNamesArray) {
     let s = 0
     for (s; s < noSpaceClub.length; s++) {
       noSpaceClub = noSpaceClub.replace(" ", "").replace("'", "").replace(".", "").replace(",", "").replace("@", "").replace("!", "").replace("#", "").replace("$", "").replace("%", "").replace("^", "").replace("&", "").replace("*", "").replace("(", "").replace(")", "").replace("-", "").replace("_", "").replace("+", "").replace("=", "").replace("`", "").replace("~", "").replace("<", "").replace(">", "").replace("/", "").replace("?", "").replace(";", "").replace(":", "").replace("[", "").replace("]", "").replace("{", "").replace("}", "").replace("|", "").replace("\\", "").replace("\"", "").replace("1", "one").replace("2", "two").replace("3", "three").replace("4", "four").replace("5", "five").replace("6", "six").replace("7", "seven").replace("8", "eight").replace("9", "nine").replace("0", "zero");
+    }
+    if(noSpaceClub.indexOf("onezero")) {
+      noSpaceClub.replace("onezero", "ten")
+    }
+    if(noSpaceClub.indexOf("oneone")) {
+      noSpaceClub.replace("oneone", "eleven")
+    }
+    if(noSpaceClub.indexOf("onetwo")) {
+      noSpaceClub.replace("onetwo", "twelve")
     }
 
     noSpaceClub = noSpaceClub.toLowerCase();
