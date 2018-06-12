@@ -14,7 +14,8 @@ $dbName = getenv("herokuDB");
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbName);
 
-$namequery= "SELECT clubName FROM HHSClubData";
+$namequery= "SELECT clubName FROM HHSClubData order by clubName REGEXP '^\d*[^\da-z&\.\' \-\"\!\@\#\$\%\^\*\(\)\;\:\<\>\,\?\/\~\`\|\_\-]' DESC, 
+clubName+0, clubName;";
 $nameresults = $conn->query($namequery);
 $shortquery= "SELECT shortDesc FROM HHSClubData";
 $shortresults = $conn->query($shortquery);
